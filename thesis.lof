@@ -1,0 +1,72 @@
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 50 realizations of the Lévy-driven Ornstein-Uhlenbeck process starting from $x_0 = 0$ (the default threshold). The red horizontal line indicates the default boundary $K = 0$. The paths demonstrate both mean-reverting behavior and sudden jump discontinuities that can drive the asset value below the threshold, motivating the extended spatial domain $x \in [-0.5, 2.0]$ used in the PINN training.}}{61}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Visualization of the training data distribution. Top: Spatio-temporal distribution of collocation, terminal, and boundary points. Bottom-left: Target values for the terminal condition at $t=1.0$. Bottom-right: Target values for the boundary conditions at $x=-0.5$ and $x=2.0$.}}{61}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Evolution of loss components during PINN training. The plot shows the decay of total loss (blue) and its constituent components: interior loss from PIDE residual enforcement (orange), terminal condition loss (green), boundary condition loss (red), and Monte Carlo anchor loss (purple). The logarithmic scale reveals the convergence behavior of each component across 21,000 training epochs.}}{63}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Surface plot of the PINN-approximated solution $\hat {\phi }(t, x; \mathbf {\Theta })$ representing the Probability of Default $P(\min _{s \in [t, T]} X_s \le K | X_t = x)$ of a Lévy-driven OU process, with parameters $k=0.3, \theta =0.0, \sigma =0.2, \lambda =1.0, \text {jump\_std}=0.2$, threshold $K=0.0$, final time $T=1.0$, and spatial domain $[-0.5, 2]$.}}{65}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces PINN validation against Monte Carlo simulations. Blue lines show PINN predictions $\hat {\phi }(t,x)$ while red dots represent Monte Carlo estimates $\hat {\phi }_{\text {MC}}(t,x)$ based on 10,000 simulated paths for each spatial point. The excellent agreement demonstrates the accuracy of the PINN approximation across different time horizons and spatial locations.}}{68}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Computational efficiency comparison between PINN and finite difference methods. Both solutions show excellent agreement (RMSE: 0.080082, Correlation: 0.9735), but the PINN achieves a remarkable 3,660× speedup in inference time (0.0268s vs 98.14s) while maintaining comparable accuracy. This computational advantage demonstrates the practical value of PINNs for real-time financial applications requiring rapid probability of default calculations.}}{69}{figure.caption.20}%
+\addvspace {10\p@ }

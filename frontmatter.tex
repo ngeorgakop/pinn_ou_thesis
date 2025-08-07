@@ -1,0 +1,127 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This file contains the content for the frontmatter.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Declaration
+%% Do not change this declaration section. However, read, check and accept its content
+
+% \begin{declaration}{
+%     This thesis is submitted in partial fulfilment of the requirements for the degree of \degreetext.
+%     I declare that this thesis conforms to the University’s Academic Misconduct policies. 
+%     It was composed by myself, the work contained therein is my own, except where explicitly stated otherwise in the text, and it has not been submitted, in whole or in part, for any other degree or professional qualification.
+    
+%     \vspace{0.5em} \noindent I hereby also grant my permission for this project to be stored, distributed and shown to other Athens University of Economics and Business students and staff for educational purposes.
+% }\end{declaration}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Abstract
+
+\begin{abstract}
+This thesis investigates the application of Physics-Informed Neural Networks (PINNs) to solve partial integro-differential equations (PIDEs) arising in financial mathematics, with particular focus on credit risk modeling. Traditional numerical methods for solving PIDEs, such as finite difference schemes, face computational challenges when dealing with jump-diffusion processes, especially in real-time applications requiring rapid probability of default calculations.
+
+This work develops a comprehensive framework for approximating solutions to PIDEs governing Lévy-driven Ornstein-Uhlenbeck processes using deep neural networks. The methodology incorporates the governing equations directly into the neural network training process through a composite loss function that enforces the PIDE residual, boundary conditions, and terminal conditions simultaneously.
+
+The experimental validation demonstrates that PINNs successfully learn accurate approximations of probability of default functions for jump-diffusion models. Comparison with Monte Carlo validates that the solution learnt by the PINN is indeed realistic. Most significantly, the trained PINN achieves computational speedups of over 3,600 times compared to traditional finite difference methods, reducing inference time from approximately 98 seconds to 0.027 seconds while maintaining comparable accuracy.
+
+The results establish PINNs as a viable alternative to conventional numerical methods for solving financial PIDEs, particularly in scenarios requiring rapid evaluation across varying market conditions. The computational efficiency gains make sophisticated jump-diffusion models practically viable for real-time risk management applications, including algorithmic trading, portfolio optimization, and regulatory stress testing. This work contributes to the growing intersection of physics-informed machine learning and quantitative finance, demonstrating how modern deep learning techniques can address fundamental computational challenges in modelling dynamic systems governed by physical laws.
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Greek Abstract
+
+% \begin{abstract}
+% \selectlanguage{greek}
+% % % \textbf{Περίληψη}
+
+% Αυτή η διπλωματική εργασία διερευνά την εφαρμογή των Φυσικά Ενημερωμένων Νευρωνικών Δικτύων (Physics-Informed Neural Networks - PINNs) για την επίλυση μερικών ολοκληρο-διαφορικών εξισώσεων (PIDEs) που προκύπτουν στα χρηματοοικονομικά μαθηματικά, με ιδιαίτερη εστίαση στη μοντελοποίηση πιστωτικού κινδύνου. Οι παραδοσιακές αριθμητικές μέθοδοι για την επίλυση PIDEs, όπως τα σχήματα πεπερασμένων διαφορών, αντιμετωπίζουν υπολογιστικές προκλήσεις όταν ασχολούνται με διαδικασίες άλματος-διάχυσης, ειδικά σε εφαρμογές πραγματικού χρόνου που απαιτούν ταχείς υπολογισμούς πιθανότητας αθέτησης.
+
+% % % Η εργασία αυτή αναπτύσσει ένα ολοκληρωμένο πλαίσιο για την προσέγγιση λύσεων σε PIDEs που διέπουν διαδικασίες Ornstein-Uhlenbeck οδηγούμενες από Lévy χρησιμοποιώντας βαθιά νευρωνικά δίκτυα. Η μεθοδολογία ενσωματώνει τις κυβερνητικές εξισώσεις απευθείας στη διαδικασία εκπαίδευσης του νευρωνικού δικτύου μέσω μιας σύνθετης συνάρτησης απώλειας που επιβάλλει ταυτόχρονα το υπόλοιπο της PIDE, τις συνοριακές συνθήκες και τις τελικές συνθήκες.
+
+% % % Η πειραματική επικύρωση δείχνει ότι τα PINNs μαθαίνουν επιτυχώς ακριβείς προσεγγίσεις των συναρτήσεων πιθανότητας αθέτησης για μοντέλα άλματος-διάχυσης. Η σύγκριση με προσομοιώσεις Monte Carlo επικυρώνει ότι η λύση που μαθαίνει το PINN είναι πραγματικά ρεαλιστική. Το σημαντικότερο είναι ότι το εκπαιδευμένο PINN επιτυγχάνει υπολογιστικές επιταχύνσεις άνω των 3.600 φορών σε σύγκριση με τις παραδοσιακές μεθόδους πεπερασμένων διαφορών, μειώνοντας τον χρόνο συμπερασμού από περίπου 98 δευτερόλεπτα σε 0.027 δευτερόλεπτα διατηρώντας παρόμοια ακρίβεια.
+
+% % % Τα αποτελέσματα καθιστούν τα PINNs ως μια βιώσιμη εναλλακτική λύση στις συμβατικές αριθμητικές μεθόδους για την επίλυση χρηματοοικονομικών PIDEs, ιδιαίτερα σε σενάρια που απαιτούν ταχεία αξιολόγηση σε διαφορετικές συνθήκες αγοράς. Τα οφέλη υπολογιστικής απόδοσης καθιστούν τα εξελιγμένα μοντέλα άλματος-διάχυσης πρακτικά βιώσιμα για εφαρμογές διαχείρισης κινδύνου σε πραγματικό χρόνο, συμπεριλαμβανομένων των αλγοριθμικών συναλλαγών, της βελτιστοποίησης χαρτοφυλακίου και των ρυθμιστικών δοκιμών αντοχής. Αυτή η εργασία συμβάλλει στην αυξανόμενη τομή της φυσικά ενημερωμένης μηχανικής μάθησης και των ποσοτικών χρηματοοικονομικών, αποδεικνύοντας πώς οι σύγχρονες τεχνικές βαθιάς μάθησης μπορούν να αντιμετωπίσουν θεμελιώδεις υπολογιστικές προκλήσεις στη μοντελοποίηση δυναμικών συστημάτων που διέπονται από φυσικούς νόμους.
+% \selectlanguage{english}
+% \end{abstract}
+
+% Define the Greek abstract environment
+% \newenvironment{greekabstract}
+%     {\chapter*{Greek Abstract}\addcontentsline{toc}{chapter}{Greek Abstract}}
+   
+
+% Greek Abstract
+\begin{greekabstract}
+    \selectlanguage{greek}
+    Αυτή η διπλωματική εργασία διερευνά την εφαρμογή των Φυσικά Ενημερωμένων Νευρωνικών Δικτύων (\selectlanguage{english}Physics-Informed Neural Networks - PINNs\selectlanguage{greek}) για την επίλυση μερικών ολοκληρο-διαφορικών εξισώσεων (\selectlanguage{english}PIDEs\selectlanguage{greek}) που προκύπτουν στα χρηματοοικονομικά μαθηματικά, με ιδιαίτερη εστίαση στη μοντελοποίηση πιστωτικού κινδύνου. Οι παραδοσιακές αριθμητικές μέθοδοι για την επίλυση \selectlanguage{english}PIDEs\selectlanguage{greek}, όπως τα σχήματα πεπερασμένων διαφορών, αντιμετωπίζουν υπολογιστικές προκλήσεις όταν ασχολούνται με διαδικασίες άλματος-διάχυσης, ειδικά σε εφαρμογές πραγματικού χρόνου που απαιτούν γρήγορους υπολογισμούς πιθανότητας αθέτησης.
+
+    Η εργασία αυτή αναπτύσσει ένα ολοκληρωμένο πλαίσιο για την προσέγγιση λύσεων σε \selectlanguage{english}PIDEs\selectlanguage{greek} που διέπουν τις διαδικασίες \selectlanguage{english}Ornstein-Uhlenbeck\selectlanguage{greek} οδηγούμενες από \selectlanguage{english}Lévy\selectlanguage{greek} χρησιμοποιώντας βαθιά νευρωνικά δίκτυα. Η μεθοδολογία ενσωματώνει τις εξισώσεις που υπαγορεύουν τις εν λόγω διαδικασίες, απευθείας στη διαδικασία εκπαίδευσης του νευρωνικού δικτύου μέσω μιας σύνθετης συνάρτησης κόστους που επιβάλλει ταυτόχρονα το υπόλοιπο της \selectlanguage{english}PIDE\selectlanguage{greek}, τις συνοριακές συνθήκες και τις τελικές συνθήκες.
+    
+    Η πειραματική αξιολόγηση δείχνει ότι τα \selectlanguage{english}PINNs\selectlanguage{greek} μαθαίνουν επιτυχώς ακριβείς προσεγγίσεις των συναρτήσεων πιθανότητας αθέτησης για μοντέλα άλματος-διάχυσης. Η σύγκριση με προσομοιώσεις \selectlanguage{english}Monte Carlo\selectlanguage{greek} επικυρώνει ότι η λύση που μαθαίνει το \selectlanguage{english}PINN\selectlanguage{greek} είναι πραγματικά ρεαλιστική. Το σημαντικότερο είναι ότι το εκπαιδευμένο \selectlanguage{english}PINN\selectlanguage{greek} επιτυγχάνει υπολογιστικές επιταχύνσεις άνω των 3.600 φορών σε σύγκριση με τις παραδοσιακές μεθόδους πεπερασμένων διαφορών, μειώνοντας τον χρόνο υπολογισμού της λύσης από περίπου 98 δευτερόλεπτα σε 0.027 δευτερόλεπτα διατηρώντας παρόμοια ακρίβεια.
+    
+    Τα αποτελέσματα καθιστούν τα \selectlanguage{english}PINNs\selectlanguage{greek} ως μια βιώσιμη εναλλακτική λύση στις συμβατικές αριθμητικές μεθόδους για την επίλυση χρηματοοικονομικών \selectlanguage{english}PIDEs\selectlanguage{greek}, ιδιαίτερα σε σενάρια που απαιτούν ταχεία αξιολόγηση σε διαφορετικές συνθήκες αγοράς. Τα οφέλη υπολογιστικής απόδοσης καθιστούν τα εξελιγμένα μοντέλα άλματος-διάχυσης πρακτικά βιώσιμα για εφαρμογές διαχείρισης κινδύνου σε πραγματικό χρόνο, συμπεριλαμβανομένων των αλγοριθμικών συναλλαγών, της βελτιστοποίησης χαρτοφυλακίου και των ρυθμιστικών δοκιμών αντοχής. Αυτή η εργασία συμβάλλει στην αυξανόμενη τομή της φυσικά ενημερωμένης μηχανικής μάθησης και των ποσοτικών χρηματοοικονομικών, αποδεικνύοντας πώς οι σύγχρονες τεχνικές βαθιάς μάθησης μπορούν να αντιμετωπίσουν θεμελιώδεις υπολογιστικές προκλήσεις στη μοντελοποίηση δυναμικών συστημάτων που διέπονται από φυσικούς νόμους.
+{\selectlanguage{english}}
+
+\end{greekabstract}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Dedication
+
+\begin{acknowledgements}
+    I would like to thank my family and friends for their support during my master's studies and the completion of this thesis. Furthermore, I would like to extend gratitude to my supervisors K. Georgiou and AN Yannacopoulos for their support, mentorship and kindness.
+    
+    \vspace{1}
+    
+    In the spirit of open, transparent, and reproducible science, I have made all code, models, and data for this thesis publicly available at: \url{https://github.com/ngeorgakop/levy_ou_pinn}
+\end{acknowledgements}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Tables of Content, Figures and Tables
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Glossary - Abbreviations
+%% Do not alter the content below (the content for those is defined in definitions.tex
+
+% \chapter*{Abbreviations}
+% \addcontentsline{toc}{chapter}{Abbrevations}
+% % Acronyms on its first use see after ToCs
+% \glsunsetall % Disable all
+% % Show all regardless if they are used or not (if that is what you want).
+% \glsaddall
+% \glsaddallunused
+% \setglossarysection{section}
+% \printglossary[type=\acronymtype,title={}]
+% \paragraph{Note:} Author abbreviations are shown in their corresponding reference entry.
+
+% \setlength{\glsdescwidth}{0.5\textwidth}
+% \setlength{\glspagelistwidth}{0.1\textwidth}
+% \cleardoublepage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Glossary - Nomenclature
+%% Do not alter the content below (the content for those is defined in definitions.tex
+
+% \chapter*{Nomenclature}
+% \addcontentsline{toc}{chapter}{Nomenclature}
+% \setglossarysection{section}
+% \glossarystyle{aiaostyle}
+% \printglossary[type=main,title={}]
+% \vspace{1cm}
+% \glossarystyle{nounits}
+% % \paragraph{Note:} Other terms are introduced as they are presented in the studies.
+
+% % Enable entries again
+% \glsresetall
+
+% \cleardoublepage

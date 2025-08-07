@@ -1,0 +1,13 @@
+\chapter{Conclusion}
+\label{ch:conclusion}
+
+The conclusion of your thesis.
+
+Note that you can also add Appendices. 
+Appendices are introduced with the command \verb|\appendix| (see at the end of the \verb|thesis.tex| file) and each appendix is then entered as a chapter that can then be cross-referenced, like the example \Cref{app:AppendixA} in this thesis template.
+
+Finally, notice that this chapter content is in a separate \verb|.tex| file called \verb|conclusion.tex|, and is included using the command command \verb|\include|.
+Splitting the thesis content is separate \verb|.tex| files | typically one per chapter | simplifies the main document. 
+And more beneficially, once the content of a chapter is completed, you can prevent it from being systematically compiled by commenting it out in the main \verb|thesis.tex| file. 
+By only uncommenting the \verb|\include| command of the chapter you are currently working on, you ensure Overleaf compiles only that chapter, which speeds up compilation considerably. 
+Only at the very end, do you then uncomment all \verb|\include| commands of all chapters in order to compile the complete thesis document.

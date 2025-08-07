@@ -1,0 +1,164 @@
+\begin{thebibliography}{10}
+
+\bibitem{abadi2016tensorflow}
+Martin Abadi.
+\newblock {TensorFlow: learning functions at scale}.
+\newblock In {\em Proceedings of the 21st ACM SIGPLAN International Conference
+  on Functional Programming}, pages 1--1, 2016.
+
+\bibitem{applebaum2009levy}
+David Applebaum.
+\newblock {\em {Lévy processes and stochastic calculus}}.
+\newblock Cambridge University Press, 2009.
+
+\bibitem{barles2008second}
+Guy Barles and Cyril Imbert.
+\newblock {Second-order elliptic integro-differential equations: viscosity
+  solutions' theory revisited}.
+\newblock {\em Annales de l'IHP Analyse non linéaire}, 25(3):567--585, 2008.
+
+\bibitem{barndorff2001modelling}
+Ole~E. Barndorff-Nielsen and Neil Shephard.
+\newblock {Modelling by Lévy processess for financial econometrics}.
+\newblock In {\em Lévy processes}, pages 283--318. 2001.
+
+\bibitem{barndorff2001non}
+Ole~E. Barndorff-Nielsen and Neil Shephard.
+\newblock {Non-Gaussian Ornstein--Uhlenbeck-based models and some of their uses
+  in financial economics}.
+\newblock {\em Journal of the Royal Statistical Society: Series B (Statistical
+  Methodology)}, 63(2):167--241, 2001.
+
+\bibitem{beck2021solving}
+Christian Beck et~al.
+\newblock {Solving the Kolmogorov PDE by means of deep learning}.
+\newblock {\em Journal of Scientific Computing}, 88:1--28, 2021.
+
+\bibitem{blackscholes1973pricing}
+Fischer Black and Myron Scholes.
+\newblock {The pricing of options and corporate liabilities}.
+\newblock {\em Journal of Political Economy}, 81(3):637--654, 1973.
+
+\bibitem{cont2005finite}
+Rama Cont and Ekaterina Voltchkova.
+\newblock {A finite difference scheme for option pricing in jump diffusion and
+  exponential Lévy models}.
+\newblock {\em SIAM Journal on Numerical Analysis}, 43(4):1596--1626, 2005.
+
+\bibitem{cont2005integro}
+Rama Cont and Ekaterina Voltchkova.
+\newblock {Integro-differential equations for option prices in exponential
+  Lévy models}.
+\newblock {\em Finance and Stochastics}, 9(3):299--325, 2005.
+
+\bibitem{frey2022deep}
+Rüdiger Frey and Verena Köck.
+\newblock {Deep neural network algorithms for parabolic PIDEs and applications
+  in insurance mathematics}.
+\newblock In {\em Mathematical and Statistical Methods for Actuarial Sciences
+  and Finance: MAF 2022}, pages 272--277. Springer, 2022.
+
+\bibitem{georgiou2023thesis}
+K~Georgiou.
+\newblock {\em {Discrete, continuous and machine learning models with
+  applications in credit risk}}.
+\newblock PhD thesis, Athens University of Economics and Business, 2023.
+
+\bibitem{goodfellow2016deep}
+Ian Goodfellow, Yoshua Bengio, and Aaron Courville.
+\newblock {\em {Deep Learning}}.
+\newblock MIT Press, 2016.
+
+\bibitem{hamadene2016viscosity}
+Said Hamadène and Marie-Amelie Morlais.
+\newblock {Viscosity solutions for second order integro-differential equations
+  without monotonicity condition: the probabilistic approach}.
+\newblock {\em Stochastics}, 88(4):632--649, 2016.
+
+\bibitem{hornik1989multilayer}
+Kurt Hornik, Maxwell Stinchcombe, and Halbert White.
+\newblock {Multilayer feedforward networks are universal approximators}.
+\newblock {\em Neural networks}, 2(5):359--366, 1989.
+
+\bibitem{ikeda1989stochastic}
+Nobuyuki Ikeda and Shinzo Watanabe.
+\newblock {\em {Stochastic differential equations and diffusion processes}}.
+\newblock North-Holland, 2nd edition, 1989.
+
+\bibitem{sato1999levy}
+Ken iti Sato.
+\newblock {\em {Lévy processes and infinitely divisible distributions}}.
+\newblock Cambridge University Press, 1999.
+
+\bibitem{karatzas1991brownian}
+Ioannis Karatzas and Steven~E. Shreve.
+\newblock {\em {Brownian motion and stochastic calculus}}.
+\newblock Springer-Verlag, 2nd edition, 1991.
+
+\bibitem{kingma2014adam}
+Diederik~P. Kingma and Jimmy Ba.
+\newblock {Adam: A method for stochastic optimization}.
+\newblock {\em arXiv preprint arXiv:1412.6980}, 2014.
+
+\bibitem{kyprianou2006introductory}
+Andreas~E. Kyprianou.
+\newblock {\em {Introductory lectures on fluctuations of Lévy processes with
+  applications}}.
+\newblock Springer Science \& Business Media, 2006.
+
+\bibitem{merton1974pricing}
+Robert~C. Merton.
+\newblock {On the pricing of corporate debt: The risk structure of interest
+  rates}.
+\newblock {\em Journal of Finance}, 29(2):449--470, 1974.
+
+\bibitem{merton1976option}
+Robert~C. Merton.
+\newblock {Option pricing when underlying stock returns are discontinuous}.
+\newblock {\em Journal of Financial Economics}, 3(1-2):125--144, 1976.
+
+\bibitem{pang2019fpinns}
+Guofei Pang, Lu~Lu, and George~Em Karniadakis.
+\newblock {fPINNs: Fractional physics-informed neural networks}.
+\newblock {\em SIAM Journal on Scientific Computing}, 41(4):A2603--A2626, 2019.
+
+\bibitem{protter2004stochastic}
+Philip~E. Protter.
+\newblock {\em {Stochastic integration and differential equations}}.
+\newblock Springer-Verlag, 2nd edition, 2004.
+
+\bibitem{raissi2019physics}
+Maziar Raissi, Paris Perdikaris, and George~E. Karniadakis.
+\newblock {Physics-informed neural networks: A deep learning framework for
+  solving forward and inverse problems involving nonlinear partial differential
+  equations}.
+\newblock {\em Journal of Computational physics}, 378:686--707, 2019.
+
+\bibitem{revuz1999continuous}
+Daniel Revuz and Marc Yor.
+\newblock {\em {Continuous martingales and Brownian motion}}.
+\newblock Springer-Verlag, 3rd edition, 1999.
+
+\bibitem{rumelhart1986learning}
+David~E. Rumelhart, Geoffrey~E. Hinton, and Ronald~J. Williams.
+\newblock {Learning representations by back-propagating errors}.
+\newblock {\em Nature}, 323(6088):533--536, 1986.
+
+\bibitem{schoutens2010levy}
+Wim Schoutens and Jessica Cariboni.
+\newblock {\em {Lévy processes in credit risk}}, volume 519.
+\newblock John Wiley \& Sons, 2010.
+
+\bibitem{wang2025simulating}
+Sifan Wang, Shyam Sankaran, Panos Stinis, and Paris Perdikaris.
+\newblock Simulating three-dimensional turbulence with physics-informed neural
+  networks.
+\newblock {\em arXiv preprint arXiv:2507.08972}, 2025.
+
+\bibitem{zhou1997jump}
+Chunsheng Zhou.
+\newblock {A jump-diffusion approach to modeling credit risk and valuing
+  defaultable securities}.
+\newblock {\em Available at SSRN 39800}, 1997.
+
+\end{thebibliography}

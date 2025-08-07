@@ -1,0 +1,367 @@
+%%  Package `UEDIN_SoE' (15.9.2022)
+%%
+%%  A LaTeX 2e style file for typesetting a
+%%  PhD thesis / First-Year Report / Master thesis / Fourth-year project 
+%%  in the School of Engineering, University of Edinburgh
+%%
+%%  By Frédéric Bosché, Daniel Fosas de Pando, Antonis Giannopoulos
+%%
+%%  This package is built from the 'edmaths.sty' package developed by
+%%  School of Mathematics, University of Edinburgh. 
+%%
+%%  Usage:
+%%  ------
+%%  Use 
+%%      \documentclass{report}
+%%  and 
+%%      \usepackage[{mengCE|bengCE|...},...]{UEDIN_SoE}.
+%%
+%%  Define \title, \author and \date before loading this package!
+%%
+%%
+%%  Example usage:
+%%  --------------
+%%
+%%  \documentclass[12pt,oneside]{report}
+%%  \title{Report Title}
+%%  \date{Report Date}
+%%  \author{Author Name}
+%%  \usepackage[phd,fancyhdr,hyperref,colour]{edmaths}
+%%  \flushbottom
+%%
+%%  \begin{document}
+%%  \pagenumbering{roman}
+%%  \maketitle
+%%  
+%%  \begin{declaration}{ ... Declaration here ... }\end{declaration}
+%%
+%%  \begin{abstract} ... Abstract text ... \end{abstract}
+%%
+%%  \begin{dedication} ... Abstract text ... \end{dedication}
+%%
+%%  \tableofcontents
+%%
+%%  \listoffigures
+%%
+%%  \listoftables
+%%
+%%  \pagenumbering{arabic}
+%%
+%%  [Main document body here, e.g. \chaper{...} \section{...} ... ]
+%%
+%% \bibliographystyle{...}  % Or use the `amsrefs' package (http://www.ams.org/tex/amsrefs.html)!
+%% \bibliography{bibliography file}
+%% \addcontentsline{toc}{chapter}{Bibliography}
+%% \end{document}
+%%
+%% ---------------
+
+
+
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{UEDIN_SoE}[2022/09/15 Edinburgh School of Engineering thesis/report style - v0.1]
+
+\RequirePackage{calc,ifthen,setspace,amsmath,amsthm,amscd,amssymb}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Set up the page size and margins
+
+\setlength{\paperheight}{297mm}    % A4 Paper
+\setlength{\paperwidth}{210mm}     %
+\setlength{\oddsidemargin}{3mm} %  Left/Inside: 4.0cm (rel. -1in)
+\setlength{\evensidemargin}{3mm} %  Right/Outside: 2.5cm (rel. -1in)
+\setlength{\topmargin}{-17.4mm}    % \
+\setlength{\headheight}{6mm}       % | Top: 2.0cm (rel. -1in), out of which 6mm for the header
+\setlength{\headsep}{6mm}          % /
+\setlength{\textwidth}{150mm}      % Margins: 2.5cm + 4cm
+% Textheight delayed until we know the line spacing.
+
+% The following is removed in favour of the `report' class options "oneside/twoside".
+%\@twosidefalse \@mparswitchfalse  % Single-sided by default
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Different package options
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Look options
+\newboolean{with-hyperref}          % Use the `hyperref' package for clickable links and bookmarks, all black
+\newboolean{with-colour}            % Add sane colours to the hyperref links
+\newboolean{with-fancyhdr}          % Use the `fancyhdr' package to provide header and footer
+
+\DeclareOption{fourier}{\setboolean{with-fourier}{true}}
+\DeclareOption{hyperref}{\setboolean{with-hyperref}{true}}
+\DeclareOption{colour}{\setboolean{with-colour}{true}}
+\DeclareOption{fancyhdr}{\setboolean{with-fancyhdr}{true}}
+
+
+\DeclareOption{single}{\renewcommand{\stretchfactor}{1}}
+\DeclareOption{onehalf}{\renewcommand{\stretchfactor}{1.5}}
+\DeclareOption{double}{\renewcommand{\stretchfactor}{2}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Degree options
+
+\ifthenelse{\isundefined{\degreetext}}{\newcommand{\degreetext}{Specify a degree option!}}{}
+
+\DeclareOption{mengCE}{\renewcommand{\degreetext}{MEng in Civil Engineering}}
+\DeclareOption{bengCE}{\renewcommand{\degreetext}{BEng in Civil Engineering}}
+\DeclareOption{mengSAFE}{\renewcommand{\degreetext}{MEng in Structural and Fire Safety Engineering}}
+\DeclareOption{bengSAFE}{\renewcommand{\degreetext}{BEng in Structural and Fire Safety Engineering}}
+\DeclareOption{mengSEWA}{\renewcommand{\degreetext}{MEng in Structural Engineering with Architecture}}
+\DeclareOption{bengSEWA}{\renewcommand{\degreetext}{BEng in Structural Engineering with Architecture}}
+\DeclareOption{mcsSAFE}{\renewcommand{\degreetext}{MSc in Structural and Fire Safety Engineering}}
+\DeclareOption{mcsFES}{\renewcommand{\degreetext}{MSc in Fire Engineering Science}}
+\DeclareOption{mscIMFSE}{\renewcommand{\degreetext}{International Master of Science in Fire Safety Engineering}}
+\DeclareOption{mscLMP}{\renewcommand{\degreetext}{MSc in Leading Major Programmes}}
+\DeclareOption{phdEng}{\renewcommand{\degreetext}{Doctor of Philosophy in Engineering}}
+\DeclareOption{mscAueb}{\renewcommand{\degreetext}{MSc in Quantitative Management of Financial and Actuarial Risk}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Processing the options options
+
+\ProcessOptions
+
+
+\ifthenelse{\boolean{with-hyperref}}
+  {
+    \RequirePackage[table,dvipsnames]{xcolor}
+    \RequirePackage[pdftitle={\@title}, pdfauthor={\@author}, pdfcreator={PDFLaTeX with edmaths}, pdfpagelayout=OneColumn, colorlinks=true, linkcolor=black, urlcolor=black, citecolor=black]{hyperref}
+  \ifthenelse{\boolean{with-colour}}
+    {
+      \hypersetup{linkcolor=Sepia, urlcolor=NavyBlue, citecolor=Sepia}
+    } {}
+  } {}
+
+\renewcommand{\chaptermark}[1]{%
+\markboth{#1}{}}
+
+\ifthenelse{\boolean{with-fancyhdr}}
+  {
+    \RequirePackage{fancyhdr}
+    \pagestyle{fancy}
+    \fancyhf{}
+    \fancyhead[RO,LE]{\thepage}
+    \fancyfoot[RO,LE]{\thepage}
+    %\fancyhead[LO]{\it\@title}
+    %\fancyhead[RE]{\@author}
+    \fancyhead[LO]{\leftmark}
+    \fancyhead[RE]{\rightmark}
+    \fancyfoot[RE,LO]{}
+  } {}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Set up the text body height
+%%
+%% For the text height, we calculate the largest number of lines that gives us 
+%% no more than 4cm bottom margin.
+%% This depends on the line spacing, which we need first.
+
+\ifthenelse{\isundefined{\stretchfactor}}{\newcommand{\stretchfactor}{1}}{}
+
+\setstretch{\stretchfactor}
+
+% Debug only: In the next line, \XXXfactor contains the number of lines on a text-only page.
+%\newlength{\XXXunit}\setlength{\XXXunit}{1pt}\newlength{\XXXfactor}\setlength{\XXXfactor}{1pt + ((672pt - \topskip) / \baselineskip) * \XXXunit}
+\newlength{\scratchlength}\setlength{\scratchlength}{\topskip + ((672pt - \topskip) / \baselineskip) * \baselineskip + \baselineskip}
+\setlength{\textheight}{\scratchlength}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Word count
+%%
+\newcommand{\quickwordcount}[1]{%
+  \immediate\write18{texcount -1 -sum -merge -q #1.tex output.bbl > #1-words.sum }%
+  \input{#1-words.sum} words%
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Set up front matter environments/pages
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Title page
+
+\makeatletter
+\renewcommand{\maketitle}{%
+  \begin{titlepage}
+    \singlespacing
+    \begin{center}
+      \vspace{-2cm}
+      % \includegraphics[width=15 cm]{Figures/University_of_Edinburgh-Logo.wine.png} \vfill
+      \includegraphics[width=15 cm]{Figures/2_AUEB-white-HR.jpg}
+      \vspace{-7cm}
+      {\Large{\degreetext}} \vfill
+      \vspace{3cm}
+      {\huge\textbf{\@title}\par}\vfill
+      by \vfill
+      \vspace{-3cm}
+      {\Large{\@author}\par} \vfill
+      \@date  \vfill
+      \vspace{-2cm}
+    \end{center}
+  \end{titlepage}
+  \if@twoside
+    \thispagestyle{empty}
+    \cleardoublepage
+  \else
+    \addtocounter{page}{1}
+  \fi
+}
+\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Declaration page
+
+\makeatletter
+\newenvironment{declaration}[1]
+    {
+       \chapter*{Declaration}
+       \addcontentsline{toc}{chapter}{Declaration}
+        
+        #1\\[1ex]
+        
+        \vspace{0.5em}
+    
+        \begin{flushright}
+          {\large \textit{\@author}}
+        \end{flushright}
+    
+        \vspace{0.5em}
+    
+        \noindent Word Count: \quickwordcount{thesis}
+    
+        \vfill
+    
+        \noindent This thesis was conducted under the supervision of \supervisor.
+    
+        \vspace{2cm}
+    }
+\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Abstract page/environment
+
+\renewenvironment{abstract}{\chapter*{\abstractname}}{\addcontentsline{toc}{chapter}{\abstractname}}
+
+% \renewenvironment{\selectlanguage{greek}Περίληψη\selectlanguage{english}}{\chapter*{\selectlanguage{greek}Περίληψη}}{\addcontentsline{toc}{chapter}{\selectlanguage{greek}Περίληψη}}
+
+\newenvironment{greekabstract}
+    {\chapter*{\selectlanguage{greek}Περίληψη}\addcontentsline{toc}{chapter}{Περίληψη}}
+    {\selectlanguage{english}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Dedication page/environment
+
+\newenvironment{acknowledgements}{\chapter*{Acknowledgements}}{\addcontentsline{toc}{chapter}{Acknowledgements}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Glossaries
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{silence}
+\RequirePackage[nonumberlist,noredefwarn,acronym,savewrites]{glossaries}
+
+% - Removes warning starting with "Deprecated command" from "glossaries"
+\WarningFilter{glossaries}{Deprecated command}
+
+% \newglossary[tlg]{subs}{tld}{tdn}{Subscripts and superscripts}
+\loadglsentries{definitions}
+\makeglossaries
+
+\newglossarystyle{aiaostyle}{%
+% put the glossary in a longtable environment:
+\renewenvironment{theglossary}%
+ {\begin{longtable}[l]{p{1in}p{3in}l}}
+ %{\begin{longtable}{lp{\glsdescwidth}l}}%
+ {\end{longtable}}%
+% Set the table’s header: title row
+\renewcommand*{\glossaryheader}{%
+ \bfseries Term & \bfseries Description & \bfseries Units
+ \\\endhead}%
+% No table header:
+%\renewcommand*{\glossaryheader}{}%
+% No heading between groups:
+ \renewcommand*{\glsgroupheading}[1]{}%
+% Main (level 0) entries displayed in a row optionally numbered:
+ \renewcommand*{\glossaryentryfield}[5]{%
+    \glstarget{##1}{##2}% Name
+    & ##3% Description
+    & \glsentryuseri{##1}% Units
+    \\% end of row
+ }%
+% Similarly for sub-entries (no sub-entry numbers):
+\renewcommand*{\glossarysubentryfield}[6]{%
+    % ignoring first argument (sub-level)
+    \glstarget{##2}{##3}% Name
+    & ##4% Description
+    & \glsentryuseri{##2}% Units
+    \\% end of row
+ }%
+% Nothing between groups:
+\renewcommand*{\glsgroupskip}{}%
+}
+
+\newglossarystyle{nounits}{%
+% put the glossary in a longtable environment:
+\renewenvironment{theglossary}%
+ {\addcontentsline{toc}{chapter}{Glossary}
+ \begin{longtable}[l]{p{1in}p{3in}l}}
+ %{\begin{longtable}{lp{\glsdescwidth}l}}%
+ {\end{longtable}}%
+% Set the table’s header: title row
+\renewcommand*{\glossaryheader}{%
+ \bfseries Term & \bfseries Description
+ \\\endhead}%
+% No table header:
+%\renewcommand*{\glossaryheader}{}%
+% No heading between groups:
+ \renewcommand*{\glsgroupheading}[1]{}%
+% Main (level 0) entries displayed in a row optionally numbered:
+ \renewcommand*{\glossaryentryfield}[5]{%
+    \glstarget{##1}{##2}% Name
+    & ##3% Description
+    \\% end of row
+ }%
+% Similarly for sub-entries (no sub-entry numbers):
+\renewcommand*{\glossarysubentryfield}[6]{%
+    % ignoring first argument (sub-level)
+    \glstarget{##2}{##3}% Name
+    & ##4% Description
+    \\% end of row
+ }%
+% Nothing between groups:
+%\renewcommand*{\glsgroupskip}{}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% References
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\RequirePackage{cleveref}% consistent reference style for objects
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Other Useful pre-loaded packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{emptypage}% remove header and footer in empty pages
+\RequirePackage{tikz}%enables dawing LaTeX figures (must be loaded after xcolor)
+\RequirePackage{multirow}
