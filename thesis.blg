@@ -4,46 +4,44 @@ The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: frontmatter.aux
 The style file: plain.bst
 Database file #1: thesis_references.bib
-Warning--empty publisher in barndorff2001modelling
-You've used 29 entries,
+You've used 27 entries,
             2118 wiz_defined-function locations,
-            663 strings with 8384 characters,
-and the built_in function-call counts, 8820 in all, are:
-= -- 885
-> -- 358
-< -- 4
-+ -- 141
-- -- 112
-* -- 574
-:= -- 1482
-add.period$ -- 89
-call.type$ -- 29
-change.case$ -- 136
+            656 strings with 8157 characters,
+and the built_in function-call counts, 8204 in all, are:
+= -- 819
+> -- 332
+< -- 5
++ -- 131
+- -- 104
+* -- 534
+:= -- 1377
+add.period$ -- 82
+call.type$ -- 27
+change.case$ -- 126
 chr.to.int$ -- 0
-cite$ -- 30
-duplicate$ -- 356
-empty$ -- 733
-format.name$ -- 112
-if$ -- 1844
+cite$ -- 27
+duplicate$ -- 332
+empty$ -- 686
+format.name$ -- 104
+if$ -- 1716
 int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 37
-newline$ -- 148
-num.names$ -- 58
-pop$ -- 155
+int.to.str$ -- 27
+missing$ -- 35
+newline$ -- 138
+num.names$ -- 54
+pop$ -- 145
 preamble$ -- 1
-purify$ -- 113
+purify$ -- 105
 quote$ -- 0
-skip$ -- 238
+skip$ -- 222
 stack$ -- 0
-substring$ -- 559
-swap$ -- 55
-text.length$ -- 4
+substring$ -- 516
+swap$ -- 53
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 98
-warning$ -- 1
-while$ -- 93
-width$ -- 31
-write$ -- 315
-(There was 1 warning)
+type$ -- 90
+warning$ -- 0
+while$ -- 87
+width$ -- 29
+write$ -- 295

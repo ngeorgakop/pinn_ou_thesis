@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.6)  7 AUG 2025 20:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.6)  9 AUG 2025 13:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1552,7 +1552,7 @@ Package hyperref Info: Link coloring OFF on input line 115.
 \@outlinefile=\write5
 \openout5 = `thesis.out'.
 
-<Figures/2_AUEB-white-HR.jpg, id=179, 577.6782pt x 150.8034pt>
+<Figures/2_AUEB-white-HR.jpg, id=167, 577.6782pt x 150.8034pt>
 File: Figures/2_AUEB-white-HR.jpg Graphic file (type jpg)
 <use Figures/2_AUEB-white-HR.jpg>
 Package pdftex.def Info: Figures/2_AUEB-white-HR.jpg  used on input line 124.
@@ -1792,137 +1792,52 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.147 W
-       e begin our exposition by exploring the fundamental limitations of cl...
-[1
+l.150 
+       [1
 
 
 
 ]
+LaTeX Font Info:    Font shape `T1/cmbr/b/n' in size <12> not available
+(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 185.
 
-
-Package fancyhdr Warning: \headheight is too small (17.07164pt): 
-(fancyhdr)                Make it at least 25.41418pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.41418pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-8.34254pt}.
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.157 
-       [2]
-
-
-Package fancyhdr Warning: \headheight is too small (17.07164pt): 
-(fancyhdr)                Make it at least 27.124pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.124pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-10.05235pt}.
+l.192     \item $
+                 P$ is a probability measure defined on the measurable space...
+[2]
 
 [3]
 
 [4]
-LaTeX Font Info:    Font shape `T1/cmbr/b/n' in size <12> not available
-(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 185.
-
-
-
-Package fancyhdr Warning: \headheight is too small (17.07164pt): 
-(fancyhdr)                Make it at least 27.124pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.124pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-10.05235pt}.
 
 [5]
 
 [6]
 
-
-Package fancyhdr Warning: \headheight is too small (17.07164pt): 
-(fancyhdr)                Make it at least 27.124pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.124pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-10.05235pt}.
-
 [7]
 
 [8]
-Underfull \vbox (badness 1694) has occurred while \output is active []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (17.07164pt): 
-(fancyhdr)                Make it at least 27.124pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.124pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-10.05235pt}.
 
 [9]
 
 [10]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-
-Package fancyhdr Warning: \headheight is too small (17.07164pt): 
-(fancyhdr)                Make it at least 27.124pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.124pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-10.05235pt}.
 
 [11]
 
 [12]
 
-
-Package fancyhdr Warning: \headheight is too small (17.07164pt): 
-(fancyhdr)                Make it at least 27.124pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.124pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-10.05235pt}.
-
 [13]
 
 [14]
 
-
-Package fancyhdr Warning: \headheight is too small (17.07164pt): 
-(fancyhdr)                Make it at least 27.124pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.124pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-10.05235pt}.
-
 [15]
-Underfull \vbox (badness 3536) has occurred while \output is active []
-
-
 
 [16]
-
-
-Package fancyhdr Warning: \headheight is too small (17.07164pt): 
-(fancyhdr)                Make it at least 27.124pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.124pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-10.05235pt}.
-
-[17]
-
-[18]
-
-
-Package fancyhdr Warning: \headheight is too small (17.07164pt): 
-(fancyhdr)                Make it at least 27.124pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.124pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-10.05235pt}.
-
-[19]
 
 LaTeX Font Warning: Font shape `OT1/cmbr/bx/n' in size <5> not available
 (Font)              Font shape `OT1/cmbr/m/n' tried instead on input line 508.
@@ -2094,37 +2009,31 @@ Overfull \hbox (0.86804pt too wide) in paragraph at lines 508--520
  []
 
 
+LaTeX Warning: Reference `sec:limitations_diffusion' on page 17 undefined on in
+put line 530.
 
-[20]
 
 
-Package fancyhdr Warning: \headheight is too small (17.07164pt): 
-(fancyhdr)                Make it at least 27.124pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.124pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-10.05235pt}.
+[17]
 
-[21]
+[18]
 Overfull \hbox (4.7225pt too wide) in paragraph at lines 545--546
 []\T1/cmbr/m/n/10.95 These struc-tural mod-els con-trast with reduced-form (or 
 intensity-based) mod-els. Reduced-
  []
 
 
+LaTeX Warning: Reference `sec:limitations_diffusion' on page 19 undefined on in
+put line 550.
 
-[22]
+
+
+[19]
 Underfull \vbox (badness 2073) has occurred while \output is active []
 
 
 
-
-Package fancyhdr Warning: \headheight is too small (17.07164pt): 
-(fancyhdr)                Make it at least 27.124pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.124pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-10.05235pt}.
-
-[23]
+[20]
 Overfull \hbox (9.81178pt too wide) in paragraph at lines 586--588
 []\T1/cmbr/bx/n/10.95 Partial Integro-Differential Equa-tions (PI-DEs): \T1/cmb
 r/m/n/10.95 The prob-a-bil-ity of de-fault $\OT1/cmbr/m/n/10.95 ^^H(\OML/cmbrm/
@@ -2133,24 +2042,39 @@ m/it/10.95 x; t; T\OT1/cmbr/m/n/10.95 ) =
 
 
 
-[24]
+[21]
 
+[22]
 
-Package fancyhdr Warning: \headheight is too small (17.07164pt): 
-(fancyhdr)                Make it at least 27.124pt, for example:
-(fancyhdr)                \setlength{\headheight}{27.124pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-10.05235pt}.
+[23]
+
+[24
+
+]
+Chapter 2.
+
 
 [25]
 
 [26]
-Chapter 2.
 
 
-[27
+Package fancyhdr Warning: \headheight is too small (17.07164pt): 
+(fancyhdr)                Make it at least 25.41418pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.41418pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-8.34254pt}.
 
-]
+[27]
+Overfull \hbox (5.90652pt too wide) in paragraph at lines 671--672
+\T1/cmbr/m/n/10.95 de-notes the de-fault prob-a-bil-ity for the cor-re-spond-in
+g con-tin-u-ous (jump-free) pro-cess, $\OML/cmbrm/m/it/10.95 p\OT1/cmbr/m/n/10.
+95 (\OML/cmbrm/m/it/10.95 x[]; x; s\OT1/cmbr/m/n/10.95 )$
+ []
+
+LaTeX Font Info:    Font shape `T1/cmbr/m/it' in size <10.95> not available
+(Font)              Font shape `T1/cmbr/m/sl' tried instead on input line 675.
+
 
 [28]
 
@@ -2162,15 +2086,6 @@ Package fancyhdr Warning: \headheight is too small (17.07164pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.34254pt}.
 
 [29]
-Overfull \hbox (5.90652pt too wide) in paragraph at lines 671--672
-\T1/cmbr/m/n/10.95 de-notes the de-fault prob-a-bil-ity for the cor-re-spond-in
-g con-tin-u-ous (jump-free) pro-cess, $\OML/cmbrm/m/it/10.95 p\OT1/cmbr/m/n/10.
-95 (\OML/cmbrm/m/it/10.95 x[]; x; s\OT1/cmbr/m/n/10.95 )$
- []
-
-LaTeX Font Info:    Font shape `T1/cmbr/m/it' in size <10.95> not available
-(Font)              Font shape `T1/cmbr/m/sl' tried instead on input line 675.
-
 
 [30]
 
@@ -2182,17 +2097,6 @@ Package fancyhdr Warning: \headheight is too small (17.07164pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.34254pt}.
 
 [31]
-
-[32]
-
-
-Package fancyhdr Warning: \headheight is too small (17.07164pt): 
-(fancyhdr)                Make it at least 25.41418pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.41418pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-8.34254pt}.
-
-[33]
 Overfull \hbox (2.94257pt too wide) in paragraph at lines 756--757
 []\T1/cmbr/m/n/10.95 For clar-ity and il-lus-tra-tive pur-poses, we be-gin with
  the one-dimensional Ornstein-Uhlenbeck
@@ -2200,13 +2104,13 @@ Overfull \hbox (2.94257pt too wide) in paragraph at lines 756--757
 
 
 
-[34]
+[32]
 
-LaTeX Warning: Reference `eq:pide_reformulated' on page 35 undefined on input l
+LaTeX Warning: Reference `eq:pide_reformulated' on page 33 undefined on input l
 ine 772.
 
 
-LaTeX Warning: Reference `eq:pide_reformulated' on page 35 undefined on input l
+LaTeX Warning: Reference `eq:pide_reformulated' on page 33 undefined on input l
 ine 780.
 
 
@@ -2218,14 +2122,14 @@ Package fancyhdr Warning: \headheight is too small (17.07164pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.34254pt}.
 
-[35]
+[33]
 
-LaTeX Warning: Reference `eq:pide_reformulated' on page 36 undefined on input l
+LaTeX Warning: Reference `eq:pide_reformulated' on page 34 undefined on input l
 ine 794.
 
 
 
-[36]
+[34]
 
 
 Package fancyhdr Warning: \headheight is too small (17.07164pt): 
@@ -2234,15 +2138,19 @@ Package fancyhdr Warning: \headheight is too small (17.07164pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.34254pt}.
 
-[37]
+[35]
 
-[38]
+[36]
 Chapter 3.
 
 
-[39
+[37
 
 ]
+
+[38]
+
+[39]
 
 [40]
 
@@ -2252,10 +2160,6 @@ Chapter 3.
 
 [43]
 
-[44]
-
-[45]
-
 
 Package fancyhdr Warning: \headheight is too small (17.07164pt): 
 (fancyhdr)                Make it at least 25.41418pt, for example:
@@ -2263,12 +2167,23 @@ Package fancyhdr Warning: \headheight is too small (17.07164pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.34254pt}.
 
-[46]
+[44]
 
-[47]
+[45]
 Underfull \vbox (badness 1824) has occurred while \output is active []
 
 
+
+
+Package fancyhdr Warning: \headheight is too small (17.07164pt): 
+(fancyhdr)                Make it at least 26.02252pt, for example:
+(fancyhdr)                \setlength{\headheight}{26.02252pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-8.95088pt}.
+
+[46]
+
+[47]
 
 
 Package fancyhdr Warning: \headheight is too small (17.07164pt): 
@@ -2281,22 +2196,11 @@ Package fancyhdr Warning: \headheight is too small (17.07164pt):
 
 [49]
 
-
-Package fancyhdr Warning: \headheight is too small (17.07164pt): 
-(fancyhdr)                Make it at least 26.02252pt, for example:
-(fancyhdr)                \setlength{\headheight}{26.02252pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-8.95088pt}.
-
 [50]
-
-[51]
-
-[52]
 Chapter 4.
 
 
-[53
+[51
 
 ]
 
@@ -2307,11 +2211,11 @@ Package fancyhdr Warning: \headheight is too small (17.07164pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-8.34254pt}.
 
+[52]
+
+[53]
+
 [54]
-
-[55]
-
-[56]
 LaTeX Font Info:    Font shape `T1/cmbr/b/n' in size <8> not available
 (Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 1210.
 
@@ -2331,18 +2235,18 @@ LaTeX Font Warning: Font shape `T1/cmbr/bx/n' in size <6> not available
 
 
 
+[55]
+
+[56]
+
 [57]
-
-[58]
-
-[59]
-<Figures/levy_ou_process_realizations.png, id=887, 1204.5pt x 702.625pt>
+<Figures/levy_ou_process_realizations.png, id=856, 1204.5pt x 702.625pt>
 File: Figures/levy_ou_process_realizations.png Graphic file (type png)
 <use Figures/levy_ou_process_realizations.png>
 Package pdftex.def Info: Figures/levy_ou_process_realizations.png  used on inpu
 t line 1322.
 (pdftex.def)             Requested size: 426.79134pt x 248.96724pt.
-<Figures/training_data_viz_updated.png, id=889, 1098.9858pt x 704.8734pt>
+<Figures/training_data_viz_updated.png, id=858, 1098.9858pt x 704.8734pt>
 File: Figures/training_data_viz_updated.png Graphic file (type png)
 <use Figures/training_data_viz_updated.png>
 Package pdftex.def Info: Figures/training_data_viz_updated.png  used on input l
@@ -2350,21 +2254,21 @@ ine 1329.
 (pdftex.def)             Requested size: 426.79134pt x 273.73793pt.
 
 
-[60]
+[58]
 
-[61 <./Figures/levy_ou_process_realizations.png> <./Figures/training_data_viz_u
+[59 <./Figures/levy_ou_process_realizations.png> <./Figures/training_data_viz_u
 pdated.png>]
-<Figures/loss_components.png, id=903, 867.24pt x 578.16pt>
+<Figures/loss_components.png, id=873, 867.24pt x 578.16pt>
 File: Figures/loss_components.png Graphic file (type png)
 <use Figures/loss_components.png>
 Package pdftex.def Info: Figures/loss_components.png  used on input line 1355.
 (pdftex.def)             Requested size: 384.10959pt x 256.07619pt.
 
 
-[62]
+[60]
 
-[63 <./Figures/loss_components.png>]
-<Figures/pinn_3d_stable_data.png, id=914, 803.0pt x 803.0pt>
+[61 <./Figures/loss_components.png>]
+<Figures/pinn_3d_stable_data.png, id=884, 803.0pt x 803.0pt>
 File: Figures/pinn_3d_stable_data.png Graphic file (type png)
 <use Figures/pinn_3d_stable_data.png>
 Package pdftex.def Info: Figures/pinn_3d_stable_data.png  used on input line 13
@@ -2372,15 +2276,15 @@ Package pdftex.def Info: Figures/pinn_3d_stable_data.png  used on input line 13
 (pdftex.def)             Requested size: 341.43436pt x 341.4359pt.
 
 
-[64]
+[62]
 
-[65 <./Figures/pinn_3d_stable_data.png>]
+[63 <./Figures/pinn_3d_stable_data.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[66]
-<Figures/pinn_vs_mc_t0.png, id=933, 867.24pt x 505.89pt>
+[64]
+<Figures/pinn_vs_mc_t0.png, id=902, 867.24pt x 505.89pt>
 File: Figures/pinn_vs_mc_t0.png Graphic file (type png)
 <use Figures/pinn_vs_mc_t0.png>
 Package pdftex.def Info: Figures/pinn_vs_mc_t0.png  used on input line 1424.
@@ -2391,17 +2295,17 @@ LaTeX Font Warning: Font shape `OT1/cmbr/bx/n' in size <7> not available
 (Font)              Font shape `OT1/cmbr/m/n' tried instead on input line 1425.
 
 
-<Figures/pinn_vs_mc_t05.png, id=934, 867.24pt x 505.89pt>
+<Figures/pinn_vs_mc_t05.png, id=903, 867.24pt x 505.89pt>
 File: Figures/pinn_vs_mc_t05.png Graphic file (type png)
 <use Figures/pinn_vs_mc_t05.png>
 Package pdftex.def Info: Figures/pinn_vs_mc_t05.png  used on input line 1429.
 (pdftex.def)             Requested size: 341.43436pt x 199.17207pt.
 
 
-[67]
+[65]
 
-[68 <./Figures/pinn_vs_mc_t0.png> <./Figures/pinn_vs_mc_t05.png>]
-<Figures/comparison_side_by_side.png, id=946, 1204.5pt x 602.25pt>
+[66 <./Figures/pinn_vs_mc_t0.png> <./Figures/pinn_vs_mc_t05.png>]
+<Figures/comparison_side_by_side.png, id=915, 1204.5pt x 602.25pt>
 File: Figures/comparison_side_by_side.png Graphic file (type png)
 <use Figures/comparison_side_by_side.png>
 Package pdftex.def Info: Figures/comparison_side_by_side.png  used on input lin
@@ -2409,7 +2313,7 @@ e 1457.
 (pdftex.def)             Requested size: 426.79134pt x 213.4005pt.
 
 
-[69 <./Figures/comparison_side_by_side.png>]
+[67 <./Figures/comparison_side_by_side.png>]
 Overfull \hbox (4.39679pt too wide) in paragraph at lines 1477--1478
 \T1/cmbr/m/n/10.95 This chap-ter pre-sented a com-pre-hen-sive ex-per-i-men-tal
  frame-work for ap-ply-ing Physics-Informed
@@ -2417,31 +2321,31 @@ Overfull \hbox (4.39679pt too wide) in paragraph at lines 1477--1478
 
 
 
-[70]
+[68]
 
-[71]
+[69]
 
-[72
+[70
 
 ]
 Chapter 5.
 
 
+[71]
+
+[72]
+
 [73]
 
-[74]
-
-[75]
-
-[76
+[74
 
 ] (./thesis.bbl
 
-[77
+[75
 
 ]
 
-[78])
+[76])
 
 Package glossaries Warning: No \printglossary or \printglossaries found. 
 (Remove \makeglossaries if you don't want any glossaries.) 
@@ -2457,7 +2361,7 @@ Package glossaries Warning: Glossary `acronym' has no entries.
 
 
 
-[79] (./thesis.aux (./frontmatter.aux))
+[77] (./thesis.aux (./frontmatter.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -2470,13 +2374,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: B56D3C16596C954EA5EB6216C22BAB81;9678.
+(rerunfilecheck)             Checksum: 28423068D2B9F02DAE724B61F598221F;8650.
  ) 
 Here is how much of TeX's memory you used:
- 40055 strings out of 473190
- 820523 string characters out of 5715801
- 1259159 words of memory out of 5000000
- 62409 multiletter control sequences out of 15000+600000
+ 40038 strings out of 473190
+ 820239 string characters out of 5715801
+ 1257672 words of memory out of 5000000
+ 62399 multiletter control sequences out of 15000+600000
  585022 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,18n,101p,2353b,1465s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2500,10 +2404,10 @@ fonts/type1/public/cm-super/sfbmr10.pfb></usr/local/texlive/2025/texmf-dist/fon
 ts/type1/public/cm-super/sfbmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/t
 ype1/public/cm-super/sfbsr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
 /public/cm-super/sfbtl10.pfb>
-Output written on thesis.pdf (94 pages, 1998071 bytes).
+Output written on thesis.pdf (92 pages, 1988213 bytes).
 PDF statistics:
- 1155 PDF objects out of 1200 (max. 8388607)
- 993 compressed objects within 10 object streams
- 315 named destinations out of 1000 (max. 500000)
- 397 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1124 PDF objects out of 1200 (max. 8388607)
+ 964 compressed objects within 10 object streams
+ 308 named destinations out of 1000 (max. 500000)
+ 373 words of extra memory for PDF output out of 10000 (max. 10000000)
 

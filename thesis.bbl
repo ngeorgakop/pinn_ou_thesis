@@ -11,16 +11,17 @@ David Applebaum.
 \newblock {\em {Lévy processes and stochastic calculus}}.
 \newblock Cambridge University Press, 2009.
 
+\bibitem{bachelier1900theorie}
+Louis Bachelier.
+\newblock Th{\'e}orie de la sp{\'e}culation.
+\newblock In {\em Annales scientifiques de l'{\'E}cole normale sup{\'e}rieure},
+  volume~17, pages 21--86, 1900.
+
 \bibitem{barles2008second}
 Guy Barles and Cyril Imbert.
 \newblock {Second-order elliptic integro-differential equations: viscosity
   solutions' theory revisited}.
 \newblock {\em Annales de l'IHP Analyse non linéaire}, 25(3):567--585, 2008.
-
-\bibitem{barndorff2001modelling}
-Ole~E. Barndorff-Nielsen and Neil Shephard.
-\newblock {Modelling by Lévy processess for financial econometrics}.
-\newblock In {\em Lévy processes}, pages 283--318. 2001.
 
 \bibitem{barndorff2001non}
 Ole~E. Barndorff-Nielsen and Neil Shephard.
@@ -44,12 +45,6 @@ Rama Cont and Ekaterina Voltchkova.
 \newblock {A finite difference scheme for option pricing in jump diffusion and
   exponential Lévy models}.
 \newblock {\em SIAM Journal on Numerical Analysis}, 43(4):1596--1626, 2005.
-
-\bibitem{cont2005integro}
-Rama Cont and Ekaterina Voltchkova.
-\newblock {Integro-differential equations for option prices in exponential
-  Lévy models}.
-\newblock {\em Finance and Stochastics}, 9(3):299--325, 2005.
 
 \bibitem{frey2022deep}
 Rüdiger Frey and Verena Köck.
@@ -154,11 +149,5 @@ Sifan Wang, Shyam Sankaran, Panos Stinis, and Paris Perdikaris.
 \newblock Simulating three-dimensional turbulence with physics-informed neural
   networks.
 \newblock {\em arXiv preprint arXiv:2507.08972}, 2025.
-
-\bibitem{zhou1997jump}
-Chunsheng Zhou.
-\newblock {A jump-diffusion approach to modeling credit risk and valuing
-  defaultable securities}.
-\newblock {\em Available at SSRN 39800}, 1997.
 
 \end{thebibliography}
