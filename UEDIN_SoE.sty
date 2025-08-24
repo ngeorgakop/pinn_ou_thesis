@@ -262,8 +262,8 @@
 % \renewenvironment{\selectlanguage{greek}Περίληψη\selectlanguage{english}}{\chapter*{\selectlanguage{greek}Περίληψη}}{\addcontentsline{toc}{chapter}{\selectlanguage{greek}Περίληψη}}
 
 \newenvironment{greekabstract}
-    {\chapter*{\selectlanguage{greek}Περίληψη}\addcontentsline{toc}{chapter}{Περίληψη}}
-    {\selectlanguage{english}}
+    {\selectlanguage{greek}\chapter*{Περίληψη}}
+    {\addcontentsline{toc}{chapter}{Περίληψη}\selectlanguage{english}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

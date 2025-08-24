@@ -527,7 +527,7 @@ Lévy-Driven OU Process & $dX_t = -k X_t dt + dL_t$ & No (gen.) & Yes (from $L_t
 \section{Application: Lévy Processes in Structural Credit Risk Models}
 \label{sec:application_structural}
 
-Having established the theoretical foundations of Lévy processes and related concepts, we now turn to their practical application in the specific domain of structural credit risk modeling, with particular focus on the estimation of the probability of default (PD). This section bridges the gap between the mathematical theory developed in the preceding sections and its concrete implementation in credit risk management, demonstrating how the sophisticated mathematical machinery of Lévy processes addresses the empirical shortcomings of classical diffusion models identified in Section \ref{sec:limitations_diffusion}.
+Building on the established theory of Lévy processes, this section details their practical application in structural credit risk modeling, focusing on the estimation of the probability of default (PD). We will demonstrate how these advanced processes overcome the empirical shortcomings of classical diffusion models. Specifically, they account for sudden defaults and produce realistic credit spread term structures, limitations highlighted in early jump-diffusion studies like Zhou's \cite{zhou1997jump}.
 
 The transition from theory to application represents a crucial step in quantitative finance, where mathematical rigour must meet practical requirements for model calibration, computational efficiency, and regulatory compliance. In the context of credit risk, this challenge is particularly evident given the implementation of IFRS 9 and similar accounting standards that demand forward-looking, lifetime probability of default estimates.
 
@@ -547,7 +547,7 @@ These structural models contrast with reduced-form (or intensity-based) models. 
 \subsection{Modelling Firm Value with Lévy Processes}
 \label{subsec:modelling_firm_value}
 
-As discussed in Section \ref{sec:limitations_diffusion}, modeling firm value $V_t$ using pure diffusion processes like GBM leads to empirical inconsistencies, primarily the underestimation of credit spreads and the inability to generate realistic spread term structures or sudden defaults. This motivated the incorporation of jumps into the dynamics of $V_t$.
+The empirical shortcomings of pure diffusion processes like GBM—primarily the underestimation of credit spreads and the inability to generate realistic spread term structures or sudden defaults, motivated the incorporation of jumps into the dynamics of $V_t$.
 
 \begin{itemize}
     \item \textbf{Jump-Diffusion Models:} A common approach is to model $V_t$ using a jump-diffusion process, such as the one proposed by \cite{merton1976option} or Zhou (1997, 2001). The general form is often expressed for the log-return $dX_t = d(\ln V_t)$:
@@ -616,13 +616,13 @@ Finally, the application of these processes within structural credit risk models
 
 \section{Introduction}
 
-Building upon the theoretical foundations established in Chapter 1, this chapter transitions from pure mathematical theory to practical implementation, focusing on the development of computational frameworks for probability of default estimation using Lévy-driven stochastic processes. The bridge between theory and application represents one of the most challenging aspects of quantitative finance, where elegant mathematical models must be transformed into robust, computationally tractable systems capable of meeting real-world requirements for accuracy, efficiency, and regulatory compliance.
 
-The implementation of International Financial Reporting Standard 9 (IFRS 9) has fundamentally transformed the landscape of credit risk modeling, necessitating forward-looking credit loss estimations that extend far beyond traditional incurred loss approaches. Under IFRS 9, financial institutions must calculate lifetime Expected Credit Losses (ECL) for assets showing a significant increase in credit risk (Stage 2), requiring sophisticated methods for modeling the lifetime Probability of Default (PD) across varying economic scenarios and time horizons. This regulatory shift demands computational frameworks that can efficiently handle complex stochastic processes while maintaining the economic intuition and interpretability required for decision-making and regulatory reporting.
 
-This chapter explores the practical implementation of stochastic process models for underlying asset values to estimate PD, with particular focus on Lévy-driven Ornstein-Uhlenbeck (OU) processes and their extensions. The choice of Lévy-driven OU processes is motivated by their ability to capture two crucial features observed in financial time series: mean reversion towards long-term equilibrium levels and sudden, discontinuous movements that reflect market shocks, news events, or changes in economic conditions. The mean-reverting property is particularly important for credit modeling, where firm fundamentals and macroeconomic factors tend to revert to long-term averages, while the jump component allows for modeling sudden deteriorations that can lead to defaults.
+Building upon the theoretical foundations established in Chapter 1, this chapter transitions from pure mathematical theory to practical implementation, focusing on the development of computational frameworks for probability of default estimation using Lévy-driven stochastic processes. The bridge between theory and application represents one of the most challenging aspects of quantitative finance, where elegant mathematical models must be transformed into robust, computationally tractable systems capable of providing accurate and efficient solutions.
 
-The computational challenges associated with Lévy processes are substantial. Unlike their Brownian motion counterparts, which lead to relatively straightforward partial differential equations, Lévy processes give rise to partial integro-differential equations (PIDEs) that incorporate both differential operators and integral terms representing the jump structure. These PIDEs rarely admit analytical solutions and require sophisticated numerical methods for their solution. Traditional approaches based on finite difference schemes face significant computational burdens when dealing with the non-local integral terms, particularly in multi-dimensional settings or when rapid evaluation across varying parameters is required.
+This chapter explores the practical implementation of stochastic process models for underlying asset values to estimate PD, with particular focus on Lévy-driven Ornstein-Uhlenbeck (OU) processes. The choice of these processes is motivated by their ability to capture two crucial features observed in financial time series: mean reversion towards long-term equilibrium levels and sudden, discontinuous movements that reflect market shocks. The mean-reverting property is particularly important for credit modeling, where firm fundamentals tend to revert to long-term averages, while the jump component allows for modeling the sudden deteriorations that can lead to defaults.
+
+The computational challenges associated with Lévy processes are substantial. Unlike their Brownian motion counterparts, which lead to relatively straightforward partial differential equations, Lévy processes give rise to partial integro-differential equations (PIDEs) that incorporate both differential operators and non-local integral terms representing the jump structure. These PIDEs rarely admit analytical solutions and require sophisticated numerical methods for their solution. This chapter is dedicated to developing and analyzing such numerical schemes, providing a classical computational benchmark before we explore modern deep learning approaches.
 
 \section{Stochastic Asset Value Models and Probability of Default}
 
@@ -694,23 +694,7 @@ The first term is the probability of scenario B: a jump occurs at time $s < u$, 
 \subsection{Partial Integro-Differential Equation (PIDE) Formulation}
 
 The primary motivation for transitioning from an Integral Equation (IE) to a Partial Integro-Differential Equation (PIDE) framework is to leverage a more computationally tractable and well-analyzed class of equations for finding the \textbf{Probability of Default (PD)}. While the IE provides a global description of the PD and is instrumental in proving its fundamental properties, the PIDE offers a local, dynamic characterization that is more amenable to direct numerical approximation. This approach allows for the efficient calculation of the entire PD surface across different initial asset values and time horizons, thereby eliminating the need for computationally intensive path simulation methods and their associated errors.
-
-\subsection{The Integral Equation as a Starting Point, using the regime-switching model as an example}
-
-Beginning \cite{georgiou2023thesis} with the IE formulation, which provides a global description of the PD, denoted as $\Phi$, for a representative model like the regime-switching case, the IE for the PD is expressed as follows:
-\begin{equation}
-\Phi(x,\rho,u) = \int_{0}^{u}\lambda e^{-\lambda s}\int_{0}^{\infty}\int_{\mathbb{R}}\mathcal{T}_{s}\Phi(x'+z,\rho,u)p(x',x,s)dF(z)dx'ds + e^{-\lambda u}\Phi_Q(x,\rho,u)
-\label{eq:ie_regime_switching_PD}
-\end{equation}
-Intuitively, this equation decomposes the PD into two scenarios:
-\begin{enumerate}
-    \item The probability of default given that \textbf{no jumps occur} up to time $u$, in which case the PD is that of the continuous (non-jump) process $\Phi_Q(x, \rho, u)$.
-    \item The probability of default given that the \textbf{first jump occurs} at some time $s < u$, where the process evolves continuously until $s$ and then continues from its new, post-jump state $x'+z$.
-\end{enumerate}
-While this formulation is invaluable for proving that the solution $\Phi$ exists and is continuous, it is not ideal for direct numerical computation.
-
-\subsection*{The PIDE as the Computational Framework}
-
+\par
 Transitioning to the PIDE to obtain a local, dynamic description of the PD's evolution. A key challenge is that the PD function may not be smooth enough for a classical (differentiable) solution to exist everywhere. To address this, the framework relies on the concept of viscosity solutions \cite{hamadene2016viscosity}.
 
 The continuity of $\Phi$, established using the IE, is the essential property needed to guarantee that the PD function is a valid viscosity solution of the PIDE \cite{barles2008second}. This provides a rigorous mathematical guarantee that a unique and stable solution exists, even without strict differentiability. The PIDE is formally derived by differentiating the IE, which for the regime-switching model yields the following equation for the PD:
@@ -810,35 +794,14 @@ b_i &= \frac{\sigma^2}{2\Delta x^2} + \frac{k(\theta - x_i)}{2\Delta x}
 
 This formulation results in a tridiagonal linear system that must be solved at each time step, making the scheme computationally efficient while maintaining the stability properties necessary for reliable probability of default calculations.
 
-\section{Applications in Credit Risk (IFRS 9)}
-
-Having seen robust numerical schemes for solving the partial integro-differential equations that govern probability of default under Lévy-driven asset value models, we now demonstrate the practical application of these computational methods within the regulatory framework of International Financial Reporting Standard 9 (IFRS 9). The implementation of IFRS 9 has fundamentally transformed credit risk management practices, requiring financial institutions to adopt forward-looking, expected credit loss models rather than the previous incurred loss approach.
-
-The probability of default function $\Phi(x, t, T)$ computed using numerical schemes serves as the foundation for multiple critical calculations required under IFRS 9. These range from the relatively straightforward 12-month expected credit loss calculations for Stage 1 assets to the more complex lifetime expected credit loss computations required for Stage 2 assets that have experienced significant increases in credit risk. The flexibility of Lévy-driven models, combined with the computational efficiency of the numerical schemes, enables practical implementation of these regulatory requirements while maintaining the economic intuition provided by structural credit risk models \cite{georgiou2023thesis}.
-
-\subsection{Stage 1 Provisions}
-Based on 1-period ahead Expected Loss (EL):
-$$ EL = EAD \times LGD \times PD_{1yr} $$
-where $PD_{1yr} = \Phi(x, 0, 1)$ is calculated from the model (probability of default within the next year).
-
-\subsection{Stage 2 Provisions (Lifetime ECL)}
-Requires summing discounted expected losses over the remaining life $T$ of the asset:
-$$ ECL_t = \sum_{i=t+1}^{T} \frac{E[EAD_i \times LGD_i \times PDPiT_i | \mathcal{F}_t]}{(1+r_i)^{i-t}} $$
-where $PDPiT_i$ is the Point-in-Time PD for period $i$. This is calculated from the default probability function as the marginal probability of defaulting in period $i$:
-$$ PDPiT_i = \Phi(x, i-1, i) \quad (4.32 \text{ adapted}) $$
-
-
-\subsection{Scenario Analysis \& Other Uses}
-The framework allows for scenario analysis, such as calculating stage-weighted provisions. The PD term structures can also be used for pricing credit derivatives like Credit Default Swaps (CDS) and for credit portfolio optimization.
-
 \section{Conclusion}
 \label{sec:conclusion_chapter2}
 
 This chapter has established the comprehensive mathematical framework for modeling probability of default using stochastic processes, with particular emphasis on Lévy-driven Ornstein-Uhlenbeck processes. We have shown how asset value dynamics can be modeled to capture both continuous fluctuations and sudden jump events that are characteristic of real-world credit events. The development of both integral equation and partial integro-differential equation formulations provides multiple pathways for mathematical analysis and numerical implementation.
 
-The numerical schemes presented, particularly the finite difference methods for solving PIDEs, offer computationally tractable approaches for practical implementation. The application to IFRS 9 provisioning demonstrates the real-world relevance of these mathematical models in regulatory compliance and risk management. The framework's flexibility allows for extensions to more complex scenarios, including stochastic volatility and regime-switching models, making it adaptable to various credit risk modeling requirements.
+The numerical schemes presented, particularly the finite difference methods for solving PIDEs, offer a robust and computationally tractable approach for practical implementation. The framework's flexibility allows for extensions to more complex scenarios, including stochastic volatility and regime-switching models, making it adaptable to various credit risk modeling requirements.
 
-The mathematical foundations laid in this chapter set the stage for the exploration of modern computational approaches, particularly the application of deep learning methods to solve these complex integro-differential equations, which will be the focus of the subsequent chapter.
+The mathematical and computational foundations laid in this chapter set the stage for the exploration of modern deep learning methods to solve these complex integro-differential equations, which will be the focus of the subsequent chapter.
 
 \chapter{Deep Learning for PIDE Approximation}
 \label{ch:deep_learning_for_pide_approximation}

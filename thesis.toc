@@ -1,8 +1,6 @@
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{Abstract}{\EnsureStandardFontEncoding {ii}}{chapter*.1}%
 \babel@toc {greek}{}\relax 
-\babel@toc {english}{}\relax 
-\contentsline {chapter}{Περίληψη}{\EnsureStandardFontEncoding {iii}}{chapter*.2}%
 \babel@toc {greek}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {greek}{}\relax 
@@ -32,6 +30,7 @@
 \babel@toc {greek}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {greek}{}\relax 
+\contentsline {chapter}{Περίληψη}{\EnsureStandardFontEncoding {iv}}{chapter*.2}%
 \babel@toc {english}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {english}{}\relax 
@@ -59,6 +58,7 @@
 \babel@toc {english}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {english}{}\relax 
+\babel@toc {greek}{}\relax 
 \babel@toc {greek}{}\relax 
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{Acknowledgements}{\EnsureStandardFontEncoding {v}}{chapter*.3}%
@@ -94,65 +94,60 @@
 \contentsline {section}{\numberline {2.1}Introduction}{25}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Stochastic Asset Value Models and Probability of Default}{26}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}The Probability of Default Function}{26}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Asset Value Models}{27}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.2}Asset Value Models}{26}{subsection.2.2.2}%
 \contentsline {subsubsection}{Basic Lévy-Driven OU Model}{27}{section*.8}%
 \contentsline {section}{\numberline {2.3}Mathematical Characterizations of Probability of Default}{27}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Integral Equation Formulation}{28}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.1}Integral Equation Formulation}{27}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Partial Integro-Differential Equation (PIDE) Formulation}{29}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}The Integral Equation as a Starting Point, using the regime-switching model as an example}{29}{subsection.2.3.3}%
 \contentsline {section}{\numberline {2.4}Numerical Schemes for Solving PIDEs}{31}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}FDM Setup}{32}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.1}FDM Setup}{31}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Matrix Formulation and Implementation Details}{33}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Complete Numerical Scheme Implementation}{34}{subsection.2.4.3}%
-\contentsline {section}{\numberline {2.5}Applications in Credit Risk (IFRS 9)}{35}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Stage 1 Provisions}{35}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Stage 2 Provisions (Lifetime ECL)}{35}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Scenario Analysis \bbl@greek@ampersand Other Uses}{36}{subsection.2.5.3}%
-\contentsline {section}{\numberline {2.6}Conclusion}{36}{section.2.6}%
-\contentsline {chapter}{\numberline {3}Deep Learning for PIDE Approximation}{37}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Introduction}{37}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Deep Neural Network Architecture}{38}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Layered Structure}{38}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Mathematical Definition of a Layer}{39}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Forward Propagation}{40}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Loss Function and Optimization Objective}{41}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Training Data}{41}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Loss Function}{41}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Cost Function (Objective)}{42}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Optimization Goal}{42}{subsection.3.3.4}%
-\contentsline {section}{\numberline {3.4}Parameter Optimization: Gradient Descent and Backpropagation}{43}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Gradient Descent}{43}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Backpropagation Algorithm}{44}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Gradient Calculation via Backpropagation}{45}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Physics-Informed Neural Networks (PINNs): Mathematical Foundations}{45}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}The General Problem Formulation}{46}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Neural Network Approximation}{47}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}The Physics-Informed Loss Function}{47}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Optimization}{49}{subsection.3.5.4}%
-\contentsline {section}{\numberline {3.6}Conclusion}{49}{section.3.6}%
-\contentsline {chapter}{\numberline {4}Experimental Setup and Methodology}{51}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Introduction}{51}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Theoretical Background: Monte Carlo Integration for the Lévy Integral}{52}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Experimental Design}{53}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Governing Partial Integro-Differential Equation (PIDE)}{53}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}PINN Architecture}{53}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Loss Function Formulation}{54}{subsection.4.3.3}%
-\contentsline {paragraph}{1. Interior Loss ($\mathcal {L}_{\text {int}}$)}{55}{section*.10}%
-\contentsline {paragraph}{2. Terminal Condition Loss ($\mathcal {L}_{\text {term}}$)}{55}{section*.11}%
-\contentsline {paragraph}{3. Boundary Condition Loss ($\mathcal {L}_{\text {bound}}$)}{55}{section*.12}%
-\contentsline {paragraph}{4. Monte Carlo Anchor Point Loss ($\mathcal {L}_{\text {mc}}$)}{55}{section*.13}%
-\contentsline {subsection}{\numberline {4.3.4}Training Data Generation}{56}{subsection.4.3.4}%
-\contentsline {section}{\numberline {4.4}Simulation Parameters}{57}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Training Data Configuration and Distribution}{58}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Numerical Results}{60}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Training Dynamics and Loss Component Analysis}{60}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}PINN Solution for Probability of Default}{62}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}PINN Validation Against Monte Carlo Simulations}{64}{subsection.4.6.3}%
-\contentsline {subsection}{\numberline {4.6.4}Computational Efficiency: PINN vs. Finite Difference Methods}{65}{subsection.4.6.4}%
-\contentsline {section}{\numberline {4.7}Conclusion}{68}{section.4.7}%
-\contentsline {chapter}{\numberline {5}Conclusions and Future Directions}{71}{chapter.5}%
-\contentsline {section}{\numberline {5.1}General Conclusions}{71}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Limitations and Future Research Directions}{72}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Advanced Loss Function Regularization}{72}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Multi-Dimensional PIDEs for Multi-Asset Models}{72}{subsection.5.2.2}%
-\contentsline {chapter}{Bibliography}{75}{chapter*.21}%
+\contentsline {subsection}{\numberline {2.4.3}Complete Numerical Scheme Implementation}{33}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Conclusion}{34}{section.2.5}%
+\contentsline {chapter}{\numberline {3}Deep Learning for PIDE Approximation}{35}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{35}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Deep Neural Network Architecture}{36}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Layered Structure}{36}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Mathematical Definition of a Layer}{37}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Forward Propagation}{38}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Loss Function and Optimization Objective}{39}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Training Data}{39}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Loss Function}{39}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Cost Function (Objective)}{40}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Optimization Goal}{40}{subsection.3.3.4}%
+\contentsline {section}{\numberline {3.4}Parameter Optimization: Gradient Descent and Backpropagation}{41}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Gradient Descent}{41}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Backpropagation Algorithm}{42}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Gradient Calculation via Backpropagation}{43}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Physics-Informed Neural Networks (PINNs): Mathematical Foundations}{43}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}The General Problem Formulation}{44}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Neural Network Approximation}{45}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}The Physics-Informed Loss Function}{45}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Optimization}{47}{subsection.3.5.4}%
+\contentsline {section}{\numberline {3.6}Conclusion}{47}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Experimental Setup and Methodology}{49}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{49}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Theoretical Background: Monte Carlo Integration for the Lévy Integral}{50}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Experimental Design}{51}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Governing Partial Integro-Differential Equation (PIDE)}{51}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}PINN Architecture}{51}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Loss Function Formulation}{52}{subsection.4.3.3}%
+\contentsline {paragraph}{1. Interior Loss ($\mathcal {L}_{\text {int}}$)}{53}{section*.9}%
+\contentsline {paragraph}{2. Terminal Condition Loss ($\mathcal {L}_{\text {term}}$)}{53}{section*.10}%
+\contentsline {paragraph}{3. Boundary Condition Loss ($\mathcal {L}_{\text {bound}}$)}{53}{section*.11}%
+\contentsline {paragraph}{4. Monte Carlo Anchor Point Loss ($\mathcal {L}_{\text {mc}}$)}{53}{section*.12}%
+\contentsline {subsection}{\numberline {4.3.4}Training Data Generation}{54}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Simulation Parameters}{55}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Training Data Configuration and Distribution}{56}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Numerical Results}{58}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Training Dynamics and Loss Component Analysis}{58}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}PINN Solution for Probability of Default}{60}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}PINN Validation Against Monte Carlo Simulations}{62}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Computational Efficiency: PINN vs. Finite Difference Methods}{63}{subsection.4.6.4}%
+\contentsline {section}{\numberline {4.7}Conclusion}{66}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Conclusions and Future Directions}{69}{chapter.5}%
+\contentsline {section}{\numberline {5.1}General Conclusions}{69}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Limitations and Future Research Directions}{70}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Advanced Loss Function Regularization}{70}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Multi-Dimensional PIDEs for Multi-Asset Models}{70}{subsection.5.2.2}%
+\contentsline {chapter}{Bibliography}{73}{chapter*.20}%
