@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.6)  24 AUG 2025 16:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.8.6)  24 AUG 2025 22:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1974,9 +1974,6 @@ LaTeX Font Info:    Font shape `T1/cmbr/m/it' in size <10.95> not available
 
 
 [28]
-Underfull \vbox (badness 3407) has occurred while \output is active []
-
-
 
 
 Package fancyhdr Warning: \headheight is too small (17.07164pt): 
@@ -1986,12 +1983,9 @@ Package fancyhdr Warning: \headheight is too small (17.07164pt):
 (fancyhdr)                \addtolength{\topmargin}{-8.34254pt}.
 
 [29]
-Underfull \vbox (badness 3333) has occurred while \output is active []
-
-
 
 [30]
-Overfull \hbox (2.94257pt too wide) in paragraph at lines 740--741
+Overfull \hbox (2.94257pt too wide) in paragraph at lines 738--739
 []\T1/cmbr/m/n/10.95 For clar-ity and il-lus-tra-tive pur-poses, we be-gin with
  the one-dimensional Ornstein-Uhlenbeck
  []
@@ -2008,24 +2002,18 @@ Package fancyhdr Warning: \headheight is too small (17.07164pt):
 [31]
 
 LaTeX Warning: Reference `eq:pide_reformulated' on page 32 undefined on input l
-ine 756.
+ine 754.
 
 
 LaTeX Warning: Reference `eq:pide_reformulated' on page 32 undefined on input l
-ine 764.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
+ine 762.
 
 
 
 [32]
 
 LaTeX Warning: Reference `eq:pide_reformulated' on page 33 undefined on input l
-ine 778.
-
-
-Underfull \vbox (badness 4713) has occurred while \output is active []
+ine 776.
 
 
 
@@ -2115,20 +2103,20 @@ Package fancyhdr Warning: \headheight is too small (17.07164pt):
 
 [52]
 LaTeX Font Info:    Font shape `T1/cmbr/b/n' in size <8> not available
-(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 1173.
+(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 1171.
 
 
 
 LaTeX Font Warning: Font shape `T1/cmbr/bx/n' in size <8> not available
-(Font)              Font shape `T1/cmbr/sb/n' tried instead on input line 1173.
+(Font)              Font shape `T1/cmbr/sb/n' tried instead on input line 1171.
 
 
 LaTeX Font Info:    Font shape `T1/cmbr/b/n' in size <6> not available
-(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 1173.
+(Font)              Font shape `T1/cmbr/bx/n' tried instead on input line 1171.
 
 
 LaTeX Font Warning: Font shape `T1/cmbr/bx/n' in size <6> not available
-(Font)              Font shape `T1/cmbr/sb/n' tried instead on input line 1173.
+(Font)              Font shape `T1/cmbr/sb/n' tried instead on input line 1171.
 
 
 
@@ -2142,13 +2130,13 @@ LaTeX Font Warning: Font shape `T1/cmbr/bx/n' in size <6> not available
 File: Figures/levy_ou_process_realizations.png Graphic file (type png)
 <use Figures/levy_ou_process_realizations.png>
 Package pdftex.def Info: Figures/levy_ou_process_realizations.png  used on inpu
-t line 1285.
+t line 1283.
 (pdftex.def)             Requested size: 426.79134pt x 248.96724pt.
 <Figures/training_data_viz_updated.png, id=832, 1098.9858pt x 704.8734pt>
 File: Figures/training_data_viz_updated.png Graphic file (type png)
 <use Figures/training_data_viz_updated.png>
 Package pdftex.def Info: Figures/training_data_viz_updated.png  used on input l
-ine 1292.
+ine 1290.
 (pdftex.def)             Requested size: 426.79134pt x 273.73793pt.
 
 
@@ -2159,7 +2147,7 @@ pdated.png>]
 <Figures/loss_components.png, id=846, 867.24pt x 578.16pt>
 File: Figures/loss_components.png Graphic file (type png)
 <use Figures/loss_components.png>
-Package pdftex.def Info: Figures/loss_components.png  used on input line 1318.
+Package pdftex.def Info: Figures/loss_components.png  used on input line 1316.
 (pdftex.def)             Requested size: 384.10959pt x 256.07619pt.
 
 
@@ -2170,7 +2158,7 @@ Package pdftex.def Info: Figures/loss_components.png  used on input line 1318.
 File: Figures/pinn_3d_stable_data.png Graphic file (type png)
 <use Figures/pinn_3d_stable_data.png>
 Package pdftex.def Info: Figures/pinn_3d_stable_data.png  used on input line 13
-46.
+44.
 (pdftex.def)             Requested size: 341.43436pt x 341.4359pt.
 
 
@@ -2185,18 +2173,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <Figures/pinn_vs_mc_t0.png, id=875, 867.24pt x 505.89pt>
 File: Figures/pinn_vs_mc_t0.png Graphic file (type png)
 <use Figures/pinn_vs_mc_t0.png>
-Package pdftex.def Info: Figures/pinn_vs_mc_t0.png  used on input line 1387.
+Package pdftex.def Info: Figures/pinn_vs_mc_t0.png  used on input line 1385.
 (pdftex.def)             Requested size: 341.43436pt x 199.17207pt.
 
 
 LaTeX Font Warning: Font shape `OT1/cmbr/bx/n' in size <7> not available
-(Font)              Font shape `OT1/cmbr/m/n' tried instead on input line 1388.
+(Font)              Font shape `OT1/cmbr/m/n' tried instead on input line 1386.
 
 
 <Figures/pinn_vs_mc_t05.png, id=876, 867.24pt x 505.89pt>
 File: Figures/pinn_vs_mc_t05.png Graphic file (type png)
 <use Figures/pinn_vs_mc_t05.png>
-Package pdftex.def Info: Figures/pinn_vs_mc_t05.png  used on input line 1392.
+Package pdftex.def Info: Figures/pinn_vs_mc_t05.png  used on input line 1390.
 (pdftex.def)             Requested size: 341.43436pt x 199.17207pt.
 
 
@@ -2207,12 +2195,12 @@ Package pdftex.def Info: Figures/pinn_vs_mc_t05.png  used on input line 1392.
 File: Figures/comparison_side_by_side.png Graphic file (type png)
 <use Figures/comparison_side_by_side.png>
 Package pdftex.def Info: Figures/comparison_side_by_side.png  used on input lin
-e 1420.
+e 1418.
 (pdftex.def)             Requested size: 426.79134pt x 213.4005pt.
 
 
 [65 <./Figures/comparison_side_by_side.png>]
-Overfull \hbox (4.39679pt too wide) in paragraph at lines 1440--1441
+Overfull \hbox (4.39679pt too wide) in paragraph at lines 1438--1439
 \T1/cmbr/m/n/10.95 This chap-ter pre-sented a com-pre-hen-sive ex-per-i-men-tal
  frame-work for ap-ply-ing Physics-Informed
  []
@@ -2302,7 +2290,7 @@ fonts/type1/public/cm-super/sfbmr10.pfb></usr/local/texlive/2025/texmf-dist/fon
 ts/type1/public/cm-super/sfbmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/t
 ype1/public/cm-super/sfbsr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1
 /public/cm-super/sfbtl10.pfb>
-Output written on thesis.pdf (90 pages, 1981776 bytes).
+Output written on thesis.pdf (90 pages, 1981750 bytes).
 PDF statistics:
  1095 PDF objects out of 1200 (max. 8388607)
  937 compressed objects within 10 object streams

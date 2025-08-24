@@ -99,9 +99,9 @@
 \contentsline {section}{\numberline {2.3}Mathematical Characterizations of Probability of Default}{27}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Integral Equation Formulation}{27}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Partial Integro-Differential Equation (PIDE) Formulation}{29}{subsection.2.3.2}%
-\contentsline {section}{\numberline {2.4}Numerical Schemes for Solving PIDEs}{31}{section.2.4}%
+\contentsline {section}{\numberline {2.4}Numerical Schemes for Solving PIDEs}{30}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}FDM Setup}{31}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Matrix Formulation and Implementation Details}{33}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.2}Matrix Formulation and Implementation Details}{32}{subsection.2.4.2}%
 \contentsline {subsection}{\numberline {2.4.3}Complete Numerical Scheme Implementation}{33}{subsection.2.4.3}%
 \contentsline {section}{\numberline {2.5}Conclusion}{34}{section.2.5}%
 \contentsline {chapter}{\numberline {3}Deep Learning for PIDE Approximation}{35}{chapter.3}%
