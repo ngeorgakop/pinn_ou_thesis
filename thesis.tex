@@ -414,6 +414,24 @@ The connection to Lévy processes is fundamental:
 \end{itemize}
 Therefore, the study of Lévy processes is intrinsically linked to the study of infinitely divisible distributions \cite{sato1999levy}. Examples of infinitely divisible distributions include the Normal, Poisson, Compound Poisson, Gamma, Negative Binomial, Stable, Variance Gamma, and Normal Inverse Gaussian distributions.
 
+\subsection{The Infinitesimal Generator}
+\label{subsec:generator}
+
+The operator $\mathcal{L}$ is the infinitesimal generator of the Lévy process $X_t$. For a sufficiently smooth function $\Phi(x)$, the generator describes the instantaneous rate of change of that function along the path of the process. It is fully characterized by the Lévy-Khintchine triplet $(a, \sigma^2, \nu)$, which corresponds to the drift, diffusion, and jump components of the process, respectively \cite{carr2003stochastic}.
+
+The generator $\mathcal{L}$ acting on the function $\Phi(x)$ is given by:
+\begin{equation}
+\mathcal{L}\Phi(x) = a \frac{\partial \Phi}{\partial x} + \frac{1}{2}\sigma^2 \frac{\partial^2 \Phi}{\partial x^2} + \int_{\mathbb{R}} \left[ \Phi(x+z) - \Phi(x) - z \mathbf{1}_{|z|<1} \frac{\partial \Phi}{\partial x} \right] \nu(dz)
+\label{eq:generator_definition}
+\end{equation}
+where the three components are:
+\begin{itemize}
+    \item \textbf{Drift Term:} The term $a \frac{\partial \Phi}{\partial x}$ represents the deterministic drift of the process.
+    \item \textbf{Diffusion Term:} The term $\frac{1}{2}\sigma^2 \frac{\partial^2 \Phi}{\partial x^2}$ corresponds to the continuous, Brownian motion component of the process, with variance $\sigma^2$.
+    \item \textbf{Integral Term:} This non-local integral term captures the contribution from the discontinuous jumps. It integrates the change in $\Phi$ due to a jump of size $z$ over all possible jump sizes, weighted by the Lévy measure $\nu(dz)$. The term $- z \mathbf{1}_{|z|<1} \frac{\partial \Phi}{\partial x}$ is a compensation term required to ensure the integral converges for Lévy processes with infinite activity (i.e., infinitely many small jumps).
+\end{itemize}
+By combining all three components, the infinitesimal generator $\mathcal{L}$ provides a complete mathematical description of how the Lévy process evolves
+
 \section{Ornstein-Uhlenbeck Processes}
 \label{sec:ou_processes}
 
@@ -538,9 +556,9 @@ In this section, we systematically explore how Lévy processes enhance structura
 
 Structural credit risk models aim to explain and predict default based on the underlying economic condition of the firm. The core idea is that default occurs when the value of a firm's assets ($V_t$) falls below a certain threshold related to its debt obligations ($K$). Default is thus an endogenous event, triggered by the deterioration of the firm's fundamental value \cite{schoutens2010levy}.
 
-The pioneering model in this class is the Merton (1974) model \cite{merton1974pricing}. It assumes a simple capital structure with one zero-coupon bond maturing at time $T$ with face value $K$. The firm's asset value $V_t$ is assumed to follow Geometric Brownian Motion (GBM). Default occurs only at maturity $T$ if $V_T < K$. In this setup, the firm's equity can be viewed as a European call option on the firm's assets with strike price $K$ and maturity $T$, while the debt is equivalent to a risk-free bond minus a put option on the assets.
+The pioneering model in this class is the Merton model \cite{merton1974pricing}. It assumes a simple capital structure with one zero-coupon bond maturing at time $T$ with face value $K$. The firm's asset value $V_t$ is assumed to follow Geometric Brownian Motion (GBM). Default occurs only at maturity $T$ if $V_T < K$. In this setup, the firm's equity can be viewed as a European call option on the firm's assets with strike price $K$ and maturity $T$, while the debt is equivalent to a risk-free bond minus a put option on the assets.
 
-A major limitation of the Merton model is that default can only occur at maturity. First Passage Time (FPT) models, initiated by Black and Cox (1976), address this by defining default as the first time the asset value $V_t$ hits a predetermined barrier $K$ (which can be constant or time-dependent). This allows for default to occur at any time prior to maturity, often interpreted as the triggering of a safety covenant protecting bondholders.
+A major limitation of the Merton model is that default can only occur at maturity. First Passage Time (FPT) models address this by defining default as the first time the asset value $V_t$ hits a predetermined barrier $K$ (which can be constant or time-dependent). This allows for default to occur at any time prior to maturity, often interpreted as the triggering of a safety covenant protecting bondholders.
 
 These structural models contrast with reduced-form (or intensity-based) models. Reduced-form models do not explicitly model the firm's asset value. Instead, they specify the default time exogenously as the first jump time of a point process, typically a Poisson or Cox process, whose intensity $\lambda(t)$ (the instantaneous default rate) is inferred from market prices of credit-sensitive instruments like bonds or credit default swaps (CDS). While often easier to calibrate to market data, they lack the direct economic intuition linking default to firm fundamentals provided by structural models.
 
@@ -550,7 +568,7 @@ These structural models contrast with reduced-form (or intensity-based) models. 
 The empirical shortcomings of pure diffusion processes like GBM, primarily the underestimation of credit spreads and the inability to generate realistic spread term structures or sudden defaults, motivated the incorporation of jumps into the dynamics of $V_t$.
 
 \begin{itemize}
-    \item \textbf{Jump-Diffusion Models:} A common approach is to model $V_t$ using a jump-diffusion process, such as the one proposed by \cite{merton1976option} or Zhou (1997, 2001). The general form is often expressed for the log-return $dX_t = d(\ln V_t)$:
+    \item \textbf{Jump-Diffusion Models:} A common approach is to model $V_t$ using a jump-diffusion process, such as the one proposed by \cite{merton1976option} or \cite{zhou1997jump}. The general form is often expressed for the log-return $dX_t = d(\ln V_t)$:
     \begin{equation}
     dX_t = (\mu - \frac{1}{2}\sigma^2 - \lambda k)dt + \sigma dW_t + dJ_t
     \label{eq:jump_diffusion}
@@ -583,7 +601,7 @@ Calculating this first hitting time probability for a general Lévy process is s
 
 Several approaches are used to compute or approximate the PD:
 \begin{itemize}
-    \item \textbf{Partial Integro-Differential Equations (PIDEs):} The probability of default $\Phi(x, t, T) = P(\min_{s \in [t,T]} V_s \le K | V_t = x) = \text{PD}(x, t, T)$ often satisfies a PIDE related to the infinitesimal generator of the underlying Lévy process (or Lévy-driven OU process) governing $V_t$ or $\ln V_t$. For a process $X_t = \ln(V_t / K)$ with generator $\mathcal{L}$, the PIDE for the probability of default $\Phi(x, t, T)$ (where $x = \ln(V_t / K) > 0$ and default occurs when $X_s \le 0$ for some $s \in [t,T]$) typically takes the form: $\frac{\partial \Phi}{\partial t} + \mathcal{L} \Phi = 0$ subject to boundary conditions $\Phi(0, t, T) = 1$ (certain default at barrier) and terminal condition $\Phi(x, T, T) = \mathbf{1}_{x \le 0}$ (default only if already at barrier at maturity). The generator $\mathcal{L}$ includes drift, diffusion, and integral terms reflecting the Lévy triplet $(a, \sigma^2, \nu)$.
+    \item \textbf{Partial Integro-Differential Equations (PIDEs):} The probability of default $\Phi(x, t, T) = P(\min_{s \in [t,T]} V_s \le K | V_t = x) = \text{PD}(x, t, T)$ often satisfies a PIDE related to the infinitesimal generator of the underlying Lévy process (or Lévy-driven OU process) governing $V_t$ or $\ln V_t$. For a process $X_t = \ln(V_t / K)$ with generator $\mathcal{L}$, as defined in \eqref{eq:generator_definition}, the PIDE for the probability of default $\Phi(x, t, T)$ (where $x = \ln(V_t / K) > 0$ and default occurs when $X_s \le 0$ for some $s \in [t,T]$) typically takes the form: $\frac{\partial \Phi}{\partial t} + \mathcal{L} \Phi = 0$ subject to boundary conditions $\Phi(0, t, T) = 1$ (certain default at barrier) and terminal condition $\Phi(x, T, T) = \mathbf{1}_{x \le 0}$ (default only if already at barrier at maturity). The generator $\mathcal{L}$ includes drift, diffusion, and integral terms reflecting the Lévy triplet $(a, \sigma^2, \nu)$.
     These PIDEs rarely have analytical solutions and must be solved numerically, often using finite difference methods (e.g., implicit schemes like Crank-Nicolson or specialized methods for the integral term).
 
     \item \textbf{Transform Methods (Fourier/Laplace):} For certain Lévy processes and barrier types (especially constant barriers), techniques involving Laplace transforms (in time) and Fourier transforms (in space) can sometimes be applied to the PIDE or related equations (like the Wiener-Hopf factorization) to obtain semi-analytical expressions for the distribution of the first passage time $\tau$ or its Laplace transform $E[e^{-q\tau}]$. These methods often require numerical inversion of the resulting transforms to get the PD.
@@ -751,7 +769,7 @@ For the integral terms, we first must approximate the jump density by considerin
 \label{eq:jump_density_approximation}
 \end{equation}
 
-Then, noting that $\nu(dz) = \lambda F(dz)$, we can approximate the first and second integral terms in \eqref{eq:pide_reformulated} using:
+Then, noting that $\nu(dz) = \lambda F(dz)$, we can approximate the first and second integral terms in \eqref{eq:pide_basic_ou} using:
 \begin{align}
 \mathcal{I}\Phi^t_i &:= \sum_{j=-J/2}^{J/2} \Phi^t_{i+j} \tilde{f}_j \Delta z \label{eq:integral_approximation_1} \\
 \tilde{I} &:= \sum_{j=-J/2}^{J/2} \tilde{f}_j \Delta z \label{eq:integral_approximation_2}
@@ -759,7 +777,7 @@ Then, noting that $\nu(dz) = \lambda F(dz)$, we can approximate the first and se
 
 for some $J \in \mathbb{Z}_+$ large enough to ensure that $\tilde{I}$ is sufficiently close to 1. In the above, we have defined that the operator $\mathcal{C} = \mathcal{C} - C$, where $\mathcal{C}$ is the Banach space $C_b$ defined in Proposition 3.4.9. We will refer to this as the integral operator. For simplicity, we will be taking $\Delta x = \Delta z$ in the calculations and numerical results below.
 
-The resulting implicit scheme for PIDE \eqref{eq:pide_reformulated} is given by:
+The resulting implicit scheme for PIDE \eqref{eq:pide_basic_ou} is given by:
 \begin{equation}
 \frac{\Phi^{t+1}_i - \Phi^t_i}{\Delta t} = k(\theta - x_i)\frac{\Phi^{t+1}_{i+1} - \Phi^{t+1}_{i-1}}{2\Delta x} + \frac{1}{2}\sigma^2 \frac{\Phi^{t+1}_{i+1} - 2\Phi^{t+1}_i + \Phi^{t+1}_{i-1}}{\Delta x^2} + \lambda\mathcal{I}\Phi^t_i - \lambda\tilde{I}\Phi^t_i
 \label{eq:implicit_scheme}
@@ -773,7 +791,7 @@ Rearranging equation \eqref{eq:implicit_scheme} to group all terms involving the
 
 \subsection{Complete Numerical Scheme Implementation}
 
-Building upon the discretization framework established in the previous subsections, we now present the complete numerical scheme for solving the PIDE \eqref{eq:pide_reformulated}. The scheme we implement follows the Backward Time, Centered Space (BTCS) methodology with explicit treatment of jump terms, which provides an optimal balance between numerical stability and computational efficiency.
+Building upon the discretization framework established in the previous subsections, we now present the complete numerical scheme for solving the PIDE \eqref{eq:pide_basic_ou}. The scheme we implement follows the Backward Time, Centered Space (BTCS) methodology with explicit treatment of jump terms, which provides an optimal balance between numerical stability and computational efficiency.
 
 \textit{Implicit-Explicit (IMEX) Scheme for the Basic OU Model:}
 
