@@ -216,6 +216,34 @@
   \end{titlepage}
   \if@twoside
     \thispagestyle{empty}
+    % \cleardoublepage
+  \else
+    \addtocounter{page}{1}
+  \fi
+}
+
+% Greek title page command
+\newcommand{\makegreektitle}{%
+  \begin{titlepage}
+    \singlespacing
+    \selectlanguage{greek}
+    \begin{center}
+      \vspace{-2cm}
+      \includegraphics[width=15 cm]{Figures/2_AUEB-white-HR.jpg}
+      \vspace{-7cm}
+      {{Μεταπτυχιακό στη Ποσοτική Διαχείριση Χρηματοοικονομικού και Αναλογιστικού Κινδύνου}} \vfill
+      \vspace{3cm}
+      {\huge\textbf{Επίλυση Μερικών Ολοκληρο-Διαφορικών Εξισώσεωn με τη χρήση Νευρωνικών Δικτύων Ενημερωμένων από τη Φυσική}\par}\vfill
+       \vfill
+      \vspace{-3cm}
+      {\Large{Νικόλαος Γεωργακόπουλος}\par} \vfill
+      \@date  \vfill
+      \vspace{-2cm}
+    \end{center}
+    \selectlanguage{english}
+  \end{titlepage}
+  \if@twoside
+    \thispagestyle{empty}
     \cleardoublepage
   \else
     \addtocounter{page}{1}

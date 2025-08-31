@@ -61,7 +61,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Change \title, \author, \supervisor and \wordcount 
+%% Change \title, \author, \supervisor and \wordcount
 %% to your thesis title, your name., your supervisor's name and the word count of your thesis.
 %% Do not touch \date.
 
@@ -122,6 +122,7 @@
 %% To change the content of the frontmatter, go to "frontmatter.tex".
 
 \maketitle
+\makegreektitle
 
 \pagenumbering{roman}
 
@@ -243,7 +244,7 @@ Standard Brownian motion, also known as the Wiener process, is a continuous-time
     \item Independent Increments: For any sequence of times $0 \le t_0 < t_1 < \dots < t_n$, the increments $B_{t_1} - B_{t_0}, B_{t_2} - B_{t_1}, \dots, B_{t_n} - B_{t_{n-1}}$ are mutually independent random variables. That is, the change in the process over any time interval is independent of its past evolution.
     \item Stationary Gaussian Increments: For any $0 \le s < t$, the increment $B_t - B_s$ follows a Gaussian (normal) distribution with mean 0 and variance $t-s$, denoted $B_t - B_s \sim N(0, t-s)$. The term "stationary" refers to the fact that the distribution of the increment depends only on the length of the time interval, $t-s$, and not on the specific times $s$ and $t$.
 \end{enumerate}
-Brownian motion was initially studied to describe the erratic movement of particles suspended in a fluid (Brownian motion) and was later adopted by Bachelier (1900) to model stock price fluctuations.
+Brownian motion was initially studied to describe the erratic movement of particles suspended in a fluid (Brownian motion) and was later adopted by \cite{bachelier1900theorie} model stock price fluctuations.
 
 Several key properties arise from this definition:
 \begin{itemize}
@@ -430,7 +431,7 @@ where the three components are:
     \item \textbf{Diffusion Term:} The term $\frac{1}{2}\sigma^2 \frac{\partial^2 \Phi}{\partial x^2}$ corresponds to the continuous, Brownian motion component of the process, with variance $\sigma^2$.
     \item \textbf{Integral Term:} This non-local integral term captures the contribution from the discontinuous jumps. It integrates the change in $\Phi$ due to a jump of size $z$ over all possible jump sizes, weighted by the Lévy measure $\nu(dz)$. The term $- z \mathbf{1}_{|z|<1} \frac{\partial \Phi}{\partial x}$ is a compensation term required to ensure the integral converges for Lévy processes with infinite activity (i.e., infinitely many small jumps).
 \end{itemize}
-By combining all three components, the infinitesimal generator $\mathcal{L}$ provides a complete mathematical description of how the Lévy process evolves
+By combining all three components, the infinitesimal generator $\mathcal{L}$ provides a complete mathematical description of how the Lévy process evolves over time.
 
 \section{Ornstein-Uhlenbeck Processes}
 \label{sec:ou_processes}
@@ -741,11 +742,11 @@ We can write the PIDE as for the basic OU model for $\Phi(x, u)$ assuming a sing
 \end{equation}
 
 
-These PIDEs are solved subject to initial and boundary conditions:
+These PIDEs are solved subject to terminal and boundary conditions for the probability of default, $\Phi$:
 \begin{itemize}
-    \item Initial Condition ($u=0$): $\Phi(x, \dots, 0) = \mathbb{I}_{\{x>0\}}$ (Survival certain if starting solvent).
-    \item Boundary Condition ($x=0$): $\Phi(0, \dots, u) = 0$ (Survival impossible if starting at default boundary).
-    \item Boundary Condition ($x \to \infty$): $\Phi(x, \dots, u) \to 1$ (Survival certain if starting far from default).
+    \item Terminal Condition ($u=0$): $\Phi(x, \dots, 0) = \mathbb{I}_{\{x \le 0\}}$. At maturity, default has occurred if and only if the asset value is at or below the boundary.
+    \item Boundary Condition ($x=0$): $\Phi(0, \dots, u) = 1$. If the asset value reaches the default boundary at any time, default is certain.
+    \item Boundary Condition ($x \to \infty$): $\Phi(x, \dots, u) \to 0$. As the initial asset value becomes arbitrarily large, the probability of default approaches zero.
 \end{itemize}
 The existence of solutions (at least in the weak 'viscosity' sense) is supported by the continuity of $\Phi$.
 
@@ -1340,13 +1341,13 @@ The training dynamics reveal several important characteristics of the PINN optim
 
 \begin{itemize}
     \item \textbf{Rapid Initial Convergence:} All loss components exhibit steep initial decay during the first 1,000 epochs, indicating that the network quickly learns to approximate the basic structure of the solution and satisfy the imposed constraints.
-    
+
     \item \textbf{Interior Loss Dominance:} The interior loss (orange line), corresponding to the PIDE residual enforcement, initially dominates the total loss magnitude. This component represents the network's ability to satisfy the governing integro-differential equation across the computational domain, including the complex jump integral terms approximated via Monte Carlo integration.
-    
+
     \item \textbf{Terminal and Boundary Condition Convergence:} The terminal condition loss (green) and boundary condition loss (red) decrease rapidly and reach very low values (below $10^{-4}$), demonstrating that the network successfully learns to satisfy the prescribed conditions at $t=T$ and the spatial boundaries $x=x_{\min}, x_{\max}$.
-    
+
     \item \textbf{Monte Carlo Anchor Regularization:} The Monte Carlo loss component (purple) provides additional regularization through pre-computed reference solutions at selected points. This component converges to low values and helps guide the overall training process, particularly in regions where the PIDE enforcement alone might be insufficient.
-    
+
     \item \textbf{Fluctuations in Loss Components:} The occasional spikes in individual components (mostly visible in the terminal and boundary losses) suggest that adaptive rebalancing is happening as the optimization explores the parameter space.
 \end{itemize}
 
@@ -1354,26 +1355,26 @@ The successful convergence of all loss components to values below $10^{-4}$ demo
 
 \subsection{PINN Solution for Probability of Default}
 \label{sec:pinn_pd_solution_results} % Changed label slightly
- 
+
 The solution to the Partial Integro-Differential Equation (PIDE) governing the Probability of Default (PD) for the Lévy-driven Ornstein-Uhlenbeck process was approximated using a Physics-Informed Neural Network (PINN). The learned solution, denoted by $\hat{\phi}(t, x; \mathbf{\Theta})$, estimates the probability that the process $X_s$ hits or crosses below a predefined threshold $K$ at any time $s \in [t, T]$, given $X_t = x$. Figure~\ref{fig:pinn_levy_ou_pd_solution} visualizes this learned function over the computational domain $(t, x) \in [0, 1] \times [-0.5, 2.0]$.
- 
+
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{Figures/pinn_3d_stable_data.png} %<-- REPLACE WITH PATH TO THIS NEW IMAGE
     \caption{Surface plot of the PINN-approximated solution $\hat{\phi}(t, x; \mathbf{\Theta})$ representing the Probability of Default $P(\min_{s \in [t, T]} X_s \le K | X_t = x)$ of a Lévy-driven OU process, with parameters $k=0.3, \theta=0.0, \sigma=0.2, \lambda=1.0, \text{jump\_std}=0.2$, threshold $K=0.0$, final time $T=1.0$, and spatial domain $[-0.5, 2]$.}
     \label{fig:pinn_levy_ou_pd_solution} % Changed label slightly
 \end{figure}
- 
+
 The plot illustrates the behavior of the Probability of Default as learned by the neural network. The axes represent time $t$, the state variable $x$, and the predicted probability $\hat{\phi}(t, x)$. The learned solution demonstrates good adherence to the imposed boundary and terminal conditions for the PD with threshold $K=0$:
- 
+
 \begin{itemize}
     \item \textbf{Terminal Condition ($t=T=1.0$):} The expected condition is $\phi(T, x) = \mathbf{1}_{x \le K}$. For $K=0$, this requires $\phi(T, x) \approx 1$ for $x \le 0$ and $\phi(T, x) \approx 0$ for $x > 0$. The plot shows $\hat{\phi}(1, x)$ is high (close to 1) near $x=0$ and decreases towards 0 for larger $x$, consistent with this condition.
     \item \textbf{Lower Spatial Boundary ($x=x_{min}=-0.5$):} For states well below the threshold ($x=-0.5$), the probability of default should be high, implying $\phi(t, -0.5) = 1$. The plot correctly shows $\hat{\phi}(t, -0.5)$ remains high (close to 1) across the time interval $t \in [0, 1]$.
     \item \textbf{Upper Spatial Boundary ($x=x_{max}=2.0$):} Starting far above the threshold ($x=2.0$) should result in a very low probability of default, implying $\phi(t, 2.0) = 0$. The plot correctly shows $\hat{\phi}(t, 2.0)$ remains close to 0 for all $t \in [0, 1]$.
 \end{itemize}
- 
+
 The evolution of the solution backward in time (from $t=1$ to $t=0$) exhibits the characteristic smoothing effect due to the diffusive and jump components of the OU process, governed by the backward PIDE. The curve $\hat{\phi}(0, x)$ at the initial time $t=0$ represents the learned probability of defaulting by time $T=1$ as a function of the starting state $x$. As expected, this initial probability is high for states near the default boundary ($x=0$) and decreases as the initial state $x$ increases.
- 
+
 The overall smoothness and the consistent adherence to the boundary and terminal conditions demonstrate that the PINN framework has successfully learned a meaningful approximation to the Probability of Default for this Lévy-driven process. This highlights the capability of PINNs to handle the complexities of PIDEs involving jump components in financial applications.
 
 \subsection{PINN Validation Against Monte Carlo Simulations}
@@ -1441,7 +1442,7 @@ Figure~\ref{fig:pinn_fd_comparison} presents a side-by-side comparison of the PI
 \textbf{Practical Implications:} This computational efficiency advantage becomes crucial in financial applications where rapid probability of default calculations are required. Consider practical scenarios such as:
 \begin{itemize}
     \item \textbf{Real-time Risk Monitoring:} Portfolio risk systems requiring instantaneous updates across thousands of positions
-    \item \textbf{Stress Testing:} Monte Carlo simulations requiring millions of default probability evaluations under different market scenarios  
+    \item \textbf{Stress Testing:} Monte Carlo simulations requiring millions of default probability evaluations under different market scenarios
     \item \textbf{High-frequency Trading:} Algorithmic trading systems needing millisecond-level risk assessments
     \item \textbf{Regulatory Reporting:} IFRS 9 expected credit loss calculations across large loan portfolios
 \end{itemize}
@@ -1488,7 +1489,7 @@ Additionally, investigating adaptive weighting \cite{wang2025simulating} schemes
 
 Real-world financial applications frequently involve portfolios of multiple correlated assets, requiring the solution of high-dimensional PIDEs with cross-asset dependencies. Extending the current framework to handle systems of coupled PIDEs represents a critical next step for practical implementation. The challenge lies in efficiently handling the curse of dimensionality while maintaining computational advantages over traditional methods.
 
-Future work should investigate domain decomposition strategies, where high-dimensional problems are broken into manageable sub-problems, and explore specialized neural network architectures designed for multi-asset scenarios. The correlation structure between assets introduces additional complexity in both the jump integral terms and the boundary condition specifications. Developing efficient sampling strategies for multi-dimensional Monte Carlo integration and investigating the scalability of the approach as the number of assets increases will be essential for real-world portfolio applications.
+Future work should investigate domain decomposition strategies, where high-dimensional problems are broken into manageable sub-problems, and explore specialized neural network architectures designed for multi-asset scenarios. The correlation structure between assets introduces additional complexity in both the jump integral terms and the boundary condition specifications. Finally, new loss function terms might be needed in order to regularize properly in the multi-asset case while investigating the scalability of the approach as the number of assets increases, something essential for real-life portfolio applications.
 
 \cleardoublepage
 \bibliographystyle{plain}

@@ -40,6 +40,11 @@ Fischer Black and Myron Scholes.
 \newblock {The pricing of options and corporate liabilities}.
 \newblock {\em Journal of Political Economy}, 81(3):637--654, 1973.
 
+\bibitem{carr2003stochastic}
+Peter Carr, H{\'e}lyette Geman, Dilip~B Madan, and Marc Yor.
+\newblock Stochastic volatility for l{\'e}vy processes.
+\newblock {\em Mathematical finance}, 13(3):345--382, 2003.
+
 \bibitem{cont2005finite}
 Rama Cont and Ekaterina Voltchkova.
 \newblock {A finite difference scheme for option pricing in jump diffusion and
